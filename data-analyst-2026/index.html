@@ -22,12 +22,12 @@
       </div>
       <nav class="section-nav" id="sectionNav">
         <a href="#sec-prep" class="nav-chip" data-nav="sec-prep">Prep</a>
-        <a href="#sec-s1" class="nav-chip" data-nav="sec-s1">S1</a>
-        <a href="#sec-s2" class="nav-chip" data-nav="sec-s2">S2</a>
-        <a href="#sec-s3" class="nav-chip" data-nav="sec-s3">S3</a>
-        <a href="#sec-s4" class="nav-chip" data-nav="sec-s4">S4</a>
-        <a href="#sec-s5" class="nav-chip" data-nav="sec-s5">S5</a>
-        <a href="#sec-s6" class="nav-chip" data-nav="sec-s6">S6</a>
+        <a href="#sec-s1" class="nav-chip" data-nav="sec-s1">M1</a>
+        <a href="#sec-s2" class="nav-chip" data-nav="sec-s2">M2</a>
+        <a href="#sec-s3" class="nav-chip" data-nav="sec-s3">M3</a>
+        <a href="#sec-s4" class="nav-chip" data-nav="sec-s4">M4</a>
+        <a href="#sec-s5" class="nav-chip" data-nav="sec-s5">M5</a>
+        <a href="#sec-s6" class="nav-chip" data-nav="sec-s6">M6</a>
       </nav>
     </div>
 
@@ -41,7 +41,7 @@
           Final</b
         >
       </p>
-      <p>Duración: <b>6 semanas</b> (+ preparación de entorno)</p>
+      <p>Duración: <b>6 módulos</b> (+ preparación de entorno) — avanzá a tu ritmo</p>
       <p>
         <span class="tg">Excel</span><span class="tg">SQL</span
         ><span class="tg">PostgreSQL</span><span class="tg">Python</span
@@ -55,18 +55,18 @@
     <h2>Cómo usar este documento</h2>
     <p>
       Este plan está organizado en
-      <b>6 semanas + una etapa de preparación inicial</b>, cada una con una
+      <b>6 módulos + una etapa de preparación inicial</b>, cada una con una
       estructura clara y repetible:
     </p>
     <ul>
-      <li><b>Objetivos</b> — lo que deberías dominar al terminar la semana.</li>
+      <li><b>Objetivos</b> — lo que deberías dominar al terminar el módulo.</li>
       <li>
         <b>Temario con checkboxes</b> — marcá cada tema a medida que lo
         completes. Tu progreso se guarda automáticamente en el navegador.
       </li>
       <li>
         <b>Proyecto de cierre</b> <span class="mt">Obligatorio</span> — no
-        avances a la siguiente semana sin completarlo.
+        avances al siguiente módulo sin completarlo.
       </li>
       <li>
         <b>Videos recomendados</b> <span class="ot">Opcional</span> — material
@@ -85,12 +85,62 @@
 
     <hr />
 
-    <h2>Resumen General</h2>
+    <h2>¿Cómo trabaja un Data Analyst hoy?</h2>
+    <p>
+      Antes de arrancar, es importante que entiendas <b>para qué</b> estás
+      aprendiendo cada herramienta. Este es el flujo real de trabajo:
+    </p>
     <table>
       <tr>
         <th>Etapa</th>
+        <th>Qué hacés</th>
+        <th>Herramientas</th>
+      </tr>
+      <tr>
+        <td><b>1. Pregunta</b></td>
+        <td>Definís qué problema de negocio querés responder</td>
+        <td>Reuniones, documentos, contexto</td>
+      </tr>
+      <tr>
+        <td><b>2. Extracción</b></td>
+        <td>Sacás los datos de bases de datos, APIs o archivos</td>
+        <td>SQL, Python, Excel</td>
+      </tr>
+      <tr>
+        <td><b>3. Limpieza</b></td>
+        <td>Corregís nulos, duplicados, formatos, outliers</td>
+        <td>Pandas, SQL, Power Query</td>
+      </tr>
+      <tr>
+        <td><b>4. Análisis</b></td>
+        <td>Explorás patrones, correlaciones, tendencias</td>
+        <td>Pandas, SQL, estadística</td>
+      </tr>
+      <tr>
+        <td><b>5. Visualización</b></td>
+        <td>Creás gráficos y dashboards para comunicar hallazgos</td>
+        <td>Power BI, Looker Studio, Matplotlib</td>
+      </tr>
+      <tr>
+        <td><b>6. Presentación</b></td>
+        <td>Contás la historia con los datos y proponés acciones</td>
+        <td>Slides, dashboards, reportes</td>
+      </tr>
+    </table>
+    <div class="tb">
+      <b>💡 Nota:</b> El 80% del tiempo de un Data Analyst se va en las etapas
+      2 y 3 (extracción y limpieza). Los datos reales siempre están sucios.
+      Por eso este plan dedica módulos enteros a SQL, Pandas y limpieza de datos.
+    </div>
+
+    <hr />
+
+    <h2>Resumen General</h2>
+    <table>
+      <tr>
+        <th>Módulo</th>
         <th>Contenido</th>
-        <th>Proyecto de Cierre</th>
+        <th>Proyecto (dataset)</th>
       </tr>
       <tr>
         <td><b>Prep</b></td>
@@ -98,34 +148,34 @@
         <td>—</td>
       </tr>
       <tr>
-        <td><b>Sem. 1</b></td>
+        <td><b>Mod. 1</b></td>
         <td>Estadística Descriptiva + Excel/Sheets</td>
-        <td>Dashboard en Excel con Tablas Dinámicas</td>
+        <td>Dashboard — Superstore Sales</td>
       </tr>
       <tr>
-        <td><b>Sem. 2</b></td>
+        <td><b>Mod. 2</b></td>
         <td>SQL — Consultas y Análisis</td>
-        <td>Análisis SQL con JOINs, CTEs y Window Functions</td>
+        <td>Análisis SQL — Northwind</td>
       </tr>
       <tr>
-        <td><b>Sem. 3</b></td>
-        <td>Python para Datos — Fundamentos</td>
-        <td>Exploración y Limpieza con Pandas en Jupyter</td>
+        <td><b>Mod. 3</b></td>
+        <td>Python + Pandas Fundamentos</td>
+        <td>Limpieza — Titanic</td>
       </tr>
       <tr>
-        <td><b>Sem. 4</b></td>
+        <td><b>Mod. 4</b></td>
         <td>Pandas Avanzado + Visualización</td>
-        <td>EDA Completo con Matplotlib, Seaborn y Plotly</td>
+        <td>EDA — World Happiness Report</td>
       </tr>
       <tr>
-        <td><b>Sem. 5</b></td>
-        <td>Power BI + Data Storytelling</td>
-        <td>Dashboard Interactivo con DAX y Storytelling</td>
+        <td><b>Mod. 5</b></td>
+        <td>Power BI / Looker Studio + Storytelling</td>
+        <td>Dashboard — E-Commerce</td>
       </tr>
       <tr>
-        <td><b>Sem. 6</b></td>
+        <td><b>Mod. 6</b></td>
         <td>Proyecto Final End-to-End</td>
-        <td>Análisis Completo: SQL + Python + Power BI + Presentación</td>
+        <td>Análisis — Accidentes Viales CABA</td>
       </tr>
     </table>
 
@@ -137,13 +187,13 @@
         PREPARACIÓN: ENTORNO DE TRABAJO
         <span class="section-progress" id="sp-prep"></span>
       </h1>
-      <p>Completar antes de empezar la Semana 1</p>
+      <p>Completar antes de empezar el Módulo 1</p>
     </div>
 
     <h2>Objetivo</h2>
     <p>
       Tener tu entorno de desarrollo completamente listo para que cuando
-      empieces la Semana 1, solo tengas que enfocarte en aprender.
+      empieces el Módulo 1, solo tengas que enfocarte en aprender.
     </p>
 
     <h3>Python 3.13+</h3>
@@ -345,7 +395,7 @@
 
     <div class="tb">
       <b>💡 Nota:</b> Instalar todo ahora te evita interrupciones durante las
-      semanas de estudio. Si algo falla, buscá el error exacto en Google o
+      módulos de estudio. Si algo falla, buscá el error exacto en Google o
       Stack Overflow antes de seguir.
     </div>
 
@@ -363,15 +413,15 @@
 
     <hr />
 
-    <!-- ===================== SEMANA 1 ===================== -->
+    <!-- ===================== MÓDULO 1 ===================== -->
     <div class="mh" id="sec-s1">
       <h1>
-        SEMANA 1: ESTADÍSTICA DESCRIPTIVA + EXCEL/SHEETS
+        MÓDULO 1: ESTADÍSTICA DESCRIPTIVA + EXCEL/SHEETS
         <span class="section-progress" id="sp-s1"></span>
       </h1>
     </div>
 
-    <h2>Objetivos de la Semana</h2>
+    <h2>Objetivos del Módulo</h2>
     <p>
       Entender estadística fundamental y dominar Excel/Google Sheets como
       herramienta de análisis. La estadística es el cimiento de todo lo que
@@ -505,8 +555,7 @@
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s1-15" /><label for="cb-s1-15"
-              >Descargar dataset real (ej: datos de ventas de Kaggle o datos
-              abiertos)</label
+              >Descargar el dataset <b>Superstore Sales</b> de Kaggle: https://www.kaggle.com/datasets/vivek468/superstore-dataset-final</label
             >
           </div>
         </li>
@@ -548,17 +597,21 @@
           </div>
         </li>
       </ul>
-      <p><b>No avances a la Semana 2 sin completar este proyecto.</b></p>
+      <p><b>No avances al Módulo 2 sin completar este proyecto.</b></p>
     </div>
 
     <div class="vs">
       <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
       <div class="vi">
-        <b>▶ Estadística desde CERO para Data Science - DotCSV</b><br />🔗
-        https://www.youtube.com/watch?v=G9_l8QASg_8
+        <b>▶ Estadística Descriptiva — curso completo - MateFacil</b><br />🔗
+        https://www.youtube.com/@maaboreda
       </div>
       <div class="vi">
-        <b>▶ Curso de Excel desde CERO - El Tío Tech</b><br />🔗
+        <b>▶ Curso de Excel desde CERO (Completo) - El Tío Tech</b><br />🔗
+        https://eltiotech.com/cursos
+      </div>
+      <div class="vi">
+        <b>▶ Tablas dinámicas en Excel — tutorial completo - El Tío Tech</b><br />🔗
         https://eltiotech.com/cursos
       </div>
     </div>
@@ -592,15 +645,15 @@
 
     <hr />
 
-    <!-- ===================== SEMANA 2 ===================== -->
+    <!-- ===================== MÓDULO 2 ===================== -->
     <div class="mh" id="sec-s2">
       <h1>
-        SEMANA 2: SQL — CONSULTAS Y ANÁLISIS
+        MÓDULO 2: SQL — CONSULTAS Y ANÁLISIS
         <span class="section-progress" id="sp-s2"></span>
       </h1>
     </div>
 
-    <h2>Objetivos de la Semana</h2>
+    <h2>Objetivos del Módulo</h2>
     <p>
       Dominar SQL como herramienta principal de extracción y análisis de datos.
       SQL es el idioma universal de los datos — si no sabés SQL, no sos data
@@ -775,8 +828,7 @@
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s2-21" /><label for="cb-s2-21"
-              >Importar dataset en PostgreSQL (mínimo 3 tablas
-              relacionadas)</label
+              >Importar la base de datos <b>Northwind</b> en PostgreSQL: https://github.com/pthom/northwind_psql</label
             >
           </div>
         </li>
@@ -811,21 +863,17 @@
           </div>
         </li>
       </ul>
-      <p><b>No avances a la Semana 3 sin completar este proyecto.</b></p>
+      <p><b>No avances al Módulo 3 sin completar este proyecto.</b></p>
     </div>
 
     <div class="vs">
       <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
       <div class="vi">
-        <b>▶ Curso de SQL desde CERO (Completo) - Soy Dalto</b><br />🔗
-        https://www.youtube.com/@saboreda4964
-      </div>
-      <div class="vi">
-        <b>▶ Curso SQL y Bases de Datos desde CERO - MoureDev</b><br />🔗
+        <b>▶ Curso SQL y Bases de Datos (7hs, completo) - MoureDev</b><br />🔗
         https://github.com/mouredev/hello-sql
       </div>
       <div class="vi">
-        <b>▶ Curso SQL - Píldoras Informáticas</b><br />🔗
+        <b>▶ Curso SQL — Píldoras Informáticas</b><br />🔗
         https://www.pildorasinformaticas.es/course/curso-sql/
       </div>
     </div>
@@ -860,15 +908,15 @@
 
     <hr />
 
-    <!-- ===================== SEMANA 3 ===================== -->
+    <!-- ===================== MÓDULO 3 ===================== -->
     <div class="mh" id="sec-s3">
       <h1>
-        SEMANA 3: PYTHON PARA DATOS — FUNDAMENTOS
+        MÓDULO 3: PYTHON PARA DATOS — FUNDAMENTOS
         <span class="section-progress" id="sp-s3"></span>
       </h1>
     </div>
 
-    <h2>Objetivos de la Semana</h2>
+    <h2>Objetivos del Módulo</h2>
     <p>
       Aprender Python orientado al manejo de datos y dominar Jupyter Notebooks.
       No necesitás ser un experto en programación — necesitás saber lo
@@ -1074,7 +1122,7 @@
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s3-23" /><label for="cb-s3-23"
-              >Cargar dataset real en Jupyter (CSV de Kaggle)</label
+              >Descargar el dataset <b>Titanic</b> de Kaggle: https://www.kaggle.com/c/titanic</label
             >
           </div>
         </li>
@@ -1115,7 +1163,7 @@
           </div>
         </li>
       </ul>
-      <p><b>No avances a la Semana 4 sin completar este proyecto.</b></p>
+      <p><b>No avances al Módulo 4 sin completar este proyecto.</b></p>
     </div>
 
     <div class="vs">
@@ -1156,18 +1204,18 @@
 
     <hr />
 
-    <!-- ===================== SEMANA 4 ===================== -->
+    <!-- ===================== MÓDULO 4 ===================== -->
     <div class="mh" id="sec-s4">
       <h1>
-        SEMANA 4: PANDAS AVANZADO + VISUALIZACIÓN
+        MÓDULO 4: PANDAS AVANZADO + VISUALIZACIÓN
         <span class="section-progress" id="sp-s4"></span>
       </h1>
     </div>
 
-    <h2>Objetivos de la Semana</h2>
+    <h2>Objetivos del Módulo</h2>
     <p>
       Dominar transformaciones avanzadas en Pandas y crear visualizaciones
-      profesionales. Esta semana es donde pasás de "saber usar Pandas" a
+      profesionales. Este módulo es donde pasás de "saber usar Pandas" a
       "pensar en datos".
     </p>
 
@@ -1324,8 +1372,7 @@
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s4-17" /><label for="cb-s4-17"
-              >Elegir dataset real de Kaggle (mínimo 5000 filas, 10+
-              columnas)</label
+              >Descargar el dataset <b>World Happiness Report</b>: https://www.kaggle.com/datasets/unsdsn/world-happiness</label
             >
           </div>
         </li>
@@ -1381,18 +1428,18 @@
           </div>
         </li>
       </ul>
-      <p><b>No avances a la Semana 5 sin completar este proyecto.</b></p>
+      <p><b>No avances al Módulo 5 sin completar este proyecto.</b></p>
     </div>
 
     <div class="vs">
       <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
       <div class="vi">
-        <b>▶ Matplotlib Tutorial Completo en Español - Codificando Bits</b><br />🔗
-        https://codificandobits.com
+        <b>▶ Data Analysis con Python — curso completo - freeCodeCamp</b><br />🔗
+        https://www.freecodecamp.org/learn/data-analysis-with-python/
       </div>
       <div class="vi">
-        <b>▶ Visualización de datos con Python - freeCodeCamp en Español</b><br />🔗
-        https://www.youtube.com/@faboreda
+        <b>▶ Documentación Seaborn — tutorial gallery con código</b><br />🔗
+        https://seaborn.pydata.org/examples/index.html
       </div>
     </div>
 
@@ -1423,15 +1470,15 @@
 
     <hr />
 
-    <!-- ===================== SEMANA 5 ===================== -->
+    <!-- ===================== MÓDULO 5 ===================== -->
     <div class="mh" id="sec-s5">
       <h1>
-        SEMANA 5: POWER BI + DATA STORYTELLING
+        MÓDULO 5: POWER BI / LOOKER STUDIO + DATA STORYTELLING
         <span class="section-progress" id="sp-s5"></span>
       </h1>
     </div>
 
-    <h2>Objetivos de la Semana</h2>
+    <h2>Objetivos del Módulo</h2>
     <p>
       Crear dashboards interactivos profesionales y aprender a comunicar
       insights con datos. El dashboard NO es el entregable — el insight es el
@@ -1443,8 +1490,7 @@
       <li>
         <div class="ci">
           <input type="checkbox" id="cb-s5-0" /><label for="cb-s5-0"
-            >Descargar Power BI Desktop (Windows) o alternativa: Looker Studio
-            (web)</label
+            ><b>Windows:</b> descargar Power BI Desktop (gratis). <b>Mac/Linux:</b> usar Looker Studio (https://lookerstudio.google.com) — gratuito y basado en web</label
           >
         </div>
       </li>
@@ -1613,7 +1659,7 @@
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s5-21" /><label for="cb-s5-21"
-              >Dataset real con múltiples tablas relacionadas</label
+              >Dataset: <b>E-Commerce Data</b> de Kaggle: https://www.kaggle.com/datasets/carrie1/ecommerce-data</label
             >
           </div>
         </li>
@@ -1646,17 +1692,21 @@
           </div>
         </li>
       </ul>
-      <p><b>No avances a la Semana 6 sin completar este proyecto.</b></p>
+      <p><b>No avances al Módulo 6 sin completar este proyecto.</b></p>
     </div>
 
     <div class="vs">
       <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
       <div class="vi">
-        <b>▶ Curso de Power BI desde CERO (Gratis y Completo) - El Tío Tech</b><br />🔗
+        <b>▶ Curso Power BI desde CERO (Gratis y Completo) - El Tío Tech</b><br />🔗
         https://eltiotech.com/power-bi-gratis/
       </div>
       <div class="vi">
-        <b>▶ Power BI — Ruta de aprendizaje oficial - Microsoft Learn</b><br />🔗
+        <b>▶ Looker Studio — tutorial oficial de Google</b><br />🔗
+        https://support.google.com/looker-studio/answer/9171315
+      </div>
+      <div class="vi">
+        <b>▶ Ruta de aprendizaje Power BI - Microsoft Learn</b><br />🔗
         https://learn.microsoft.com/es-es/training/powerplatform/power-bi
       </div>
     </div>
@@ -1691,15 +1741,15 @@
 
     <hr />
 
-    <!-- ===================== SEMANA 6 ===================== -->
+    <!-- ===================== MÓDULO 6 ===================== -->
     <div class="mh" id="sec-s6">
       <h1>
-        SEMANA 6: PROYECTO FINAL — ANÁLISIS END-TO-END
+        MÓDULO 6: PROYECTO FINAL — ANÁLISIS END-TO-END
         <span class="section-progress" id="sp-s6"></span>
       </h1>
     </div>
 
-    <h2>Objetivos de la Semana</h2>
+    <h2>Objetivos del Módulo</h2>
     <p>
       Integrar TODAS las herramientas en un análisis end-to-end profesional.
       Este proyecto es tu carta de presentación — lo que mostrás en entrevistas
@@ -1711,15 +1761,14 @@
       <li>
         <div class="ci">
           <input type="checkbox" id="cb-s6-0" /><label for="cb-s6-0"
-            >Elegir dataset real (Kaggle, datos abiertos gobierno, APIs
-            públicas)</label
+            >Dataset: <b>Siniestros Viales de Buenos Aires</b> — https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales</label
           >
         </div>
       </li>
       <li>
         <div class="ci">
           <input type="checkbox" id="cb-s6-1" /><label for="cb-s6-1"
-            >Definir mínimo 5 preguntas de negocio concretas</label
+            >Definir mín. 5 preguntas de análisis: tendencias temporales, zonas peligrosas, tipos de vehículos, víctimas por edad, horarios críticos</label
           >
         </div>
       </li>
@@ -1947,8 +1996,12 @@
     <div class="vs">
       <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
       <div class="vi">
-        <b>▶ Cómo hacer un proyecto de Data Analysis - Alex The Analyst</b><br />🔗
+        <b>▶ Data Analyst portfolio — Alex The Analyst (canal)</b><br />🔗
         https://www.youtube.com/@AlexTheAnalyst
+      </div>
+      <div class="vi">
+        <b>▶ Buenos Aires Data — portal de datos abiertos</b><br />🔗
+        https://data.buenosaires.gob.ar
       </div>
     </div>
 
@@ -2002,29 +2055,29 @@
         <th>Fuerte en</th>
       </tr>
       <tr>
-        <td>Ringa Tech</td>
-        <td>YouTube</td>
-        <td>Python, Pandas, Data Science</td>
-      </tr>
-      <tr>
-        <td>Píldoras Informáticas</td>
-        <td>YouTube</td>
-        <td>SQL, bases de datos</td>
-      </tr>
-      <tr>
         <td>Soy Dalto</td>
         <td>YouTube</td>
-        <td>Python desde cero</td>
+        <td>Python, SQL desde cero</td>
+      </tr>
+      <tr>
+        <td>MoureDev</td>
+        <td>YouTube / GitHub</td>
+        <td>Python, SQL, Git</td>
       </tr>
       <tr>
         <td>El Tío Tech</td>
-        <td>YouTube</td>
-        <td>Power BI, Excel</td>
+        <td>YouTube / Web</td>
+        <td>Excel, Power BI</td>
       </tr>
       <tr>
-        <td>Matemáticas profe Alex</td>
-        <td>YouTube</td>
-        <td>Estadística</td>
+        <td>Píldoras Informáticas</td>
+        <td>YouTube / Web</td>
+        <td>SQL, bases de datos</td>
+      </tr>
+      <tr>
+        <td>freeCodeCamp</td>
+        <td>YouTube / Web</td>
+        <td>Data Analysis con Python</td>
       </tr>
     </table>
 
