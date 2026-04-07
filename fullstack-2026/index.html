@@ -41,7 +41,10 @@
           Final</b
         >
       </p>
-      <p>Duración: <b>6 semanas</b> (+ preparación de entorno)</p>
+      <p>
+        Duración estimada: <b>~8 semanas</b> (+ preparación de entorno) — los
+        días son una guía de ritmo sugerido, no una fecha límite
+      </p>
       <p>
         <span class="tg">React 19.2</span><span class="tg">Vite</span
         ><span class="tg">Tailwind v4</span><span class="tg">Django 6.0</span
@@ -55,7 +58,7 @@
     <h2>Cómo usar este documento</h2>
     <p>
       Este plan está organizado en
-      <b>6 semanas + una etapa de preparación inicial</b>, cada una con una
+      <b>~8 semanas + una etapa de preparación inicial</b>, cada una con una
       estructura clara y repetible:
     </p>
     <ul>
@@ -81,6 +84,64 @@
       Los temas no tienen todos la misma complejidad. HTML se absorbe rápido;
       JavaScript y React requieren más práctica y repetición.
     </p>
+    <p>
+      Las etiquetas <b>"Día X-Y"</b> en cada sección representan un
+      <b>ritmo sugerido de estudio</b>, no una fecha límite. Si un tema te
+      lleva más tiempo del estimado, está perfecto — lo importante es no
+      saltear temas y completar cada proyecto antes de avanzar.
+    </p>
+
+    <hr />
+
+    <h2>¿Cómo trabaja un Fullstack Developer hoy?</h2>
+    <p>
+      Antes de arrancar, es importante que entiendas <b>para qué</b> estás
+      aprendiendo cada herramienta. Este es el flujo real de trabajo:
+    </p>
+    <table>
+      <tr>
+        <th>Etapa</th>
+        <th>Qué hacés</th>
+        <th>Herramientas</th>
+      </tr>
+      <tr>
+        <td><b>1. Diseño</b></td>
+        <td>Revisás wireframes, diseño UI/UX, y definís la arquitectura</td>
+        <td>Figma, diagramas, documentación</td>
+      </tr>
+      <tr>
+        <td><b>2. Backend</b></td>
+        <td>Creás modelos, API endpoints, autenticación, lógica de negocio</td>
+        <td>Django, DRF, PostgreSQL, JWT</td>
+      </tr>
+      <tr>
+        <td><b>3. Frontend</b></td>
+        <td>Construís la interfaz, consumís la API, manejás estado</td>
+        <td>React, Tailwind, Zustand, TanStack Query</td>
+      </tr>
+      <tr>
+        <td><b>4. Integración</b></td>
+        <td>Conectás frontend con backend, manejás CORS, auth, errores</td>
+        <td>Axios, JWT, variables de entorno</td>
+      </tr>
+      <tr>
+        <td><b>5. Testing</b></td>
+        <td>Verificás que todo funcione: unitarios, integración, E2E</td>
+        <td>Vitest, pytest, Testing Library</td>
+      </tr>
+      <tr>
+        <td><b>6. Deploy</b></td>
+        <td>Subís a producción, configurás dominio, monitoreás errores</td>
+        <td>Vercel, Railway, GitHub Actions</td>
+      </tr>
+    </table>
+    <div class="tb">
+      <b>💡 Nota:</b> En el día a día real, un fullstack developer pasa la
+      mayor parte del tiempo leyendo código existente, revisando PRs,
+      debuggeando, y en reuniones. Escribir código nuevo es solo una parte del
+      trabajo. Por eso este plan enfatiza entender conceptos, no solo copiar
+      snippets.
+    </div>
 
     <hr />
 
@@ -90,40 +151,48 @@
         <th>Etapa</th>
         <th>Contenido</th>
         <th>Proyecto de Cierre</th>
+        <th>Duración</th>
       </tr>
       <tr>
         <td><b>Prep</b></td>
         <td>Preparación del entorno de trabajo</td>
         <td>—</td>
+        <td>1-2 días</td>
       </tr>
       <tr>
         <td><b>Sem. 1</b></td>
         <td>HTML5 + CSS3 + Tailwind CSS v4</td>
         <td>Landing Page + Portfolio</td>
+        <td>7 días</td>
       </tr>
       <tr>
         <td><b>Sem. 2</b></td>
         <td>JavaScript — Fundamentos, DOM y Estructuras</td>
         <td rowspan="2">App de Gestión de Tareas</td>
+        <td>7 días</td>
       </tr>
       <tr>
         <td><b>Sem. 3</b></td>
         <td>JavaScript — Asincronía y JS Avanzado</td>
+        <td>7 días</td>
       </tr>
       <tr>
-        <td><b>Sem. 4</b></td>
-        <td>React 19 + Ecosistema Completo</td>
+        <td><b>Sem. 4-5</b></td>
+        <td>React 19 + TypeScript + Ecosistema Completo</td>
         <td>Dashboard E-Commerce</td>
-      </tr>
-      <tr>
-        <td><b>Sem. 5</b></td>
-        <td>Python + Django 6 + Django REST Framework</td>
-        <td>API REST Blog + Auth</td>
+        <td>14 días</td>
       </tr>
       <tr>
         <td><b>Sem. 6</b></td>
+        <td>Python + Django 6 + DRF + Seguridad Web</td>
+        <td>API REST Blog + Auth</td>
+        <td>10 días</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 7-8</b></td>
         <td>Proyecto Final Fullstack: React 19 + Django 6</td>
         <td>Plataforma Kanban</td>
+        <td>10 días</td>
       </tr>
     </table>
 
@@ -320,6 +389,97 @@
       </li>
     </ul>
 
+    <h3>Git Workflow Básico</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-gw0" /><label for="cb-prep-gw0"
+            >Configurar Git:
+            <code>git config --global user.name "Tu Nombre"</code> y
+            <code>git config --global user.email "tu@email.com"</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-gw1" /><label for="cb-prep-gw1"
+            >Flujo básico: <code>git init</code>, <code>git add</code>,
+            <code>git commit</code>, <code>git push</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-gw2" /><label for="cb-prep-gw2"
+            >Branches: <code>git branch</code>, <code>git checkout -b</code>,
+            <code>git merge</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-gw3" /><label for="cb-prep-gw3"
+            >Conventional Commits: <code>feat:</code>, <code>fix:</code>,
+            <code>docs:</code>, <code>refactor:</code> — mensajes descriptivos
+            siempre</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-gw4" /><label for="cb-prep-gw4"
+            ><code>.gitignore</code>: qué archivos NO commitear
+            (<code>node_modules/</code>, <code>.env</code>,
+            <code>__pycache__/</code>)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-gw5" /><label for="cb-prep-gw5"
+            >Pull Requests en GitHub: crear, describir, revisar, mergear</label
+          >
+        </div>
+      </li>
+    </ul>
+    <div class="tb">
+      <b>💡 Nota:</b> Git no es opcional — es una herramienta de trabajo diaria.
+      Si tus commits dicen "cambios" o "asdasd", ningún reclutador te va a
+      tomar en serio. Usá conventional commits desde el primer proyecto.
+    </div>
+
+    <h3>PostgreSQL (lo vas a necesitar en Semana 5)</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-pg0" /><label for="cb-prep-pg0"
+            >Descargar e instalar PostgreSQL 16+ desde
+            https://www.postgresql.org/download/</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-pg1" /><label for="cb-prep-pg1"
+            >Recordar la contraseña del usuario "postgres" y dejar marcado
+            pgAdmin 4 durante la instalación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-pg2" /><label for="cb-prep-pg2"
+            >Verificar que funciona: abrir pgAdmin y conectarse al servidor
+            local</label
+          >
+        </div>
+      </li>
+    </ul>
+    <div class="tb">
+      <b>💡 Nota:</b> Instalá PostgreSQL ahora aunque no lo uses hasta la
+      Semana 5. Así evitás interrupciones cuando estés en pleno Django.
+    </div>
+
     <h3>Navegador</h3>
     <ul class="cl" data-section="prep">
       <li>
@@ -332,8 +492,8 @@
     </ul>
 
     <div class="tb">
-      <b>💡 Nota:</b> Instalar todo ahora te evita interrupciones durante las
-      semanas de estudio.
+      <b>💡 Nota:</b> Instalar todo ahora te evita interrupciones durante los
+      módulos de estudio.
     </div>
 
     <div class="vs">
@@ -1169,8 +1329,9 @@
     </div>
 
     <div class="tb">
-      <b>💡 Nota:</b> El proyecto tiene 4 días asignados. Si terminás antes,
-      sumá features: categorías, prioridades, fecha de vencimiento.
+      <b>💡 Nota:</b> Si terminás el proyecto antes de lo esperado, sumá
+      features: categorías, prioridades, fecha de vencimiento. Cuanto más
+      completo, mejor para tu portfolio.
     </div>
 
     <hr />
@@ -1188,6 +1349,12 @@
       Aprender React desde los fundamentos hasta un nivel productivo con hooks
       de React 19, routing, estado global y herramientas profesionales.
     </p>
+
+    <div class="tb">
+      <b>💡 Aviso:</b> Esta sección tiene 14 días (2 semanas) porque React +
+      TypeScript + su ecosistema es mucho terreno. No intentes apurarlo — es
+      mejor entender React bien que pasar de largo para "no atrasarse".
+    </div>
 
     <h3>Día 1-2: Fundamentos de React 19</h3>
     <ul class="cl" data-section="s4">
@@ -1244,7 +1411,7 @@
       </li>
     </ul>
 
-    <h3>Día 3: Hooks Avanzados</h3>
+    <h3>Día 3-4: Hooks Avanzados</h3>
     <div class="sb">
       <h3>
         <span class="mt">Lectura Obligatoria</span> Documentación oficial de
@@ -1314,7 +1481,87 @@
       </ul>
     </div>
 
-    <h3>Día 4: Routing, Estado Global y Data Fetching</h3>
+    <h3>Día 5-6: TypeScript Esencial</h3>
+    <div class="sb">
+      <h3>
+        <span class="mt">Lectura Obligatoria</span> Por qué TypeScript
+      </h3>
+      <p>
+        En 2026, TypeScript es el ESTÁNDAR en frontend profesional. La mayoría
+        de ofertas laborales lo piden. No necesitás ser experto ahora, pero sí
+        entender los fundamentos para poder leer y escribir código tipado.
+      </p>
+    </div>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-ts0" /><label for="cb-s4-ts0"
+            >Tipos básicos: <code>string, number, boolean, array, object</code>,
+            <code>any</code> vs <code>unknown</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-ts1" /><label for="cb-s4-ts1"
+            >Interfaces y types: cuándo usar cada uno</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-ts2" /><label for="cb-s4-ts2"
+            >Genéricos básicos: <code>Array&lt;T&gt;</code>,
+            <code>Promise&lt;T&gt;</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-ts3" /><label for="cb-s4-ts3"
+            >TypeScript con React: tipar props, estado, eventos</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-ts4" /><label for="cb-s4-ts4"
+            >Configurar Vite con TypeScript:
+            <code>npm create vite@latest -- --template react-ts</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 7: Herramientas de Desarrollo</h3>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-dt0" /><label for="cb-s4-dt0"
+            >React DevTools: instalar extensión de Chrome, inspeccionar
+            componentes, props y estado</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-dt1" /><label for="cb-s4-dt1"
+            >Chrome DevTools: Network tab para debuggear API calls, Console para
+            errores</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-dt2" /><label for="cb-s4-dt2"
+            >React DevTools Profiler: identificar re-renders
+            innecesarios</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 8-9: Routing, Estado Global y Data Fetching</h3>
     <ul class="cl" data-section="s4">
       <li>
         <div class="ci">
@@ -1384,7 +1631,7 @@
       </li>
     </ul>
 
-    <h3>Día 5-7: UI Profesional + Proyecto</h3>
+    <h3>Día 10-11: UI Profesional</h3>
     <ul class="cl" data-section="s4">
       <li>
         <div class="ci">
@@ -1416,8 +1663,40 @@
       </li>
       <li>
         <div class="ci">
+          <input type="checkbox" id="cb-s4-a11y0" /><label for="cb-s4-a11y0"
+            >Accesibilidad en React: labels en formularios, alt en imágenes,
+            focus management</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-a11y1" /><label for="cb-s4-a11y1"
+            >Navegación con teclado: <code>tabIndex</code>, manejo de focus
+            en modales y dropdowns</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
           <input type="checkbox" id="cb-s4-29" /><label for="cb-s4-29"
-            >Testing: Vitest + React Testing Library</label
+            >Testing con Vitest: configuración, test unitarios, describe/it/expect</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-29b" /><label for="cb-s4-29b"
+            >React Testing Library: render, screen, userEvent, queries
+            accesibles (getByRole, getByLabelText)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-29c" /><label for="cb-s4-29c"
+            >Qué testear: interacciones de usuario, no detalles de
+            implementación</label
           >
         </div>
       </li>
@@ -1430,6 +1709,7 @@
       </li>
     </ul>
 
+    <h3>Día 12-14: Proyecto de Cierre</h3>
     <div class="pb">
       <h3>
         <span class="mt">Obligatorio</span> Proyecto: Dashboard de E-Commerce
@@ -1551,7 +1831,7 @@
       profesional con Django 6 y DRF.
     </p>
 
-    <h3>Día 1: Python para Web (Crash Course)</h3>
+    <h3>Día 1-2: Python para Web (Crash Course)</h3>
     <p><i>Si ya sabés JavaScript, Python se absorbe en un día.</i></p>
     <ul class="cl" data-section="s5">
       <li>
@@ -1606,7 +1886,7 @@
       </li>
     </ul>
 
-    <h3>Día 2-3: Django 6 Fundamentos + DRF</h3>
+    <h3>Día 3-5: Django 6 Fundamentos + DRF</h3>
     <div class="sb">
       <h3><span class="mt">Lectura Obligatoria</span> Documentación oficial</h3>
       <p>
@@ -1616,21 +1896,24 @@
       </p>
     </div>
     <div class="sb">
-      <h3>Instalación de PostgreSQL (Windows)</h3>
+      <h3>PostgreSQL — Verificación</h3>
+      <p>
+        Si seguiste la etapa de Preparación, PostgreSQL ya debería estar
+        instalado. Si no, volvé a Prep e instalalo ahora.
+      </p>
       <ul class="cl" data-section="s5">
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s5-7" /><label for="cb-s5-7"
-              >Descargar instalador desde
-              https://www.postgresql.org/download/windows/</label
+              >Verificar que PostgreSQL está corriendo y podés conectarte
+              desde pgAdmin</label
             >
           </div>
         </li>
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s5-8" /><label for="cb-s5-8"
-              >Recordar contraseña del usuario "postgres" y dejar marcado
-              pgAdmin 4</label
+              >Crear una base de datos para el proyecto Django</label
             >
           </div>
         </li>
@@ -1742,7 +2025,7 @@
       </li>
     </ul>
 
-    <h3>Día 4: Autenticación, Seguridad y DB</h3>
+    <h3>Día 6-7: Autenticación, Seguridad y DB</h3>
     <ul class="cl" data-section="s5">
       <li>
         <div class="ci">
@@ -1832,7 +2115,61 @@
       </li>
     </ul>
 
-    <h3>Día 5-7: Proyecto de Cierre</h3>
+    <h3>Día 8: Seguridad Web Básica</h3>
+    <p>
+      Entender seguridad no es opcional — es parte del trabajo de un
+      fullstack developer. Django te protege de mucho, pero necesitás
+      ENTENDER de qué te está protegiendo.
+    </p>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-sec0" /><label for="cb-s5-sec0"
+            >XSS (Cross-Site Scripting): qué es, cómo Django auto-escapa
+            templates, cómo React previene inyección en JSX</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-sec1" /><label for="cb-s5-sec1"
+            >CSRF (Cross-Site Request Forgery): qué es, cómo funciona
+            <code>{% csrf_token %}</code> en Django</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-sec2" /><label for="cb-s5-sec2"
+            >SQL Injection: qué es, por qué el ORM de Django te protege, por
+            qué NUNCA usar queries raw con input del usuario</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-sec3" /><label for="cb-s5-sec3"
+            >HTTPS: por qué es obligatorio en producción, HSTS</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-sec4" /><label for="cb-s5-sec4"
+            >Variables de entorno: NUNCA hardcodear secrets, API keys o
+            contraseñas en el código</label
+          >
+        </div>
+      </li>
+    </ul>
+    <div class="tb">
+      <b>💡 Nota:</b> El OWASP Top 10 es la referencia estándar de
+      vulnerabilidades web. No necesitás memorizarlo, pero sí entender las 5
+      más comunes: XSS, CSRF, SQL Injection, autenticación rota, y exposición
+      de datos sensibles.
+    </div>
+
+    <h3>Día 9-10: Proyecto de Cierre</h3>
     <div class="pb">
       <h3>
         <span class="mt">Obligatorio</span> Proyecto: API REST para Blog con
@@ -1896,7 +2233,7 @@
           </div>
         </li>
       </ul>
-      <p><b>No avances a la Semana 6 sin completar este proyecto.</b></p>
+      <p><b>No avances al Proyecto Final sin completar este proyecto.</b></p>
     </div>
 
     <div class="vs">
@@ -1942,7 +2279,7 @@
       de presentación profesional.
     </p>
 
-    <h3>Día 1: Arquitectura y Setup</h3>
+    <h3>Día 1-2: Arquitectura y Setup</h3>
     <ul class="cl" data-section="s6">
       <li>
         <div class="ci">
@@ -1988,7 +2325,7 @@
       </li>
     </ul>
 
-    <h3>Día 2-3: Backend Completo</h3>
+    <h3>Día 3-5: Backend Completo</h3>
     <ul class="cl" data-section="s6">
       <li>
         <div class="ci">
@@ -2041,7 +2378,7 @@
       </li>
     </ul>
 
-    <h3>Día 4-5: Frontend Completo</h3>
+    <h3>Día 6-8: Frontend Completo</h3>
     <ul class="cl" data-section="s6">
       <li>
         <div class="ci">
@@ -2101,7 +2438,7 @@
       </li>
     </ul>
 
-    <h3>Día 6-7: Testing, Deploy y Pulido</h3>
+    <h3>Día 9-10: Testing, Deploy y Pulido</h3>
     <ul class="cl" data-section="s6">
       <li>
         <div class="ci">
@@ -2149,108 +2486,53 @@
 
     <div class="pb">
       <h3>
-        <span class="mt">Obligatorio</span> Proyecto Final: Plataforma Kanban
+        <span class="mt">Obligatorio</span> Checklist de Entrega Final
       </h3>
-      <h4>Backend (Django 6 + DRF):</h4>
+      <p>
+        Antes de dar por terminado el proyecto, verificá que tu repo cumpla con
+        TODOS estos criterios de calidad:
+      </p>
       <ul class="cl" data-section="s6">
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s6-27" /><label for="cb-s6-27"
-              >API REST con DRF</label
+              >Drag &amp; drop de cards funcional entre columnas</label
             >
           </div>
         </li>
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s6-28" /><label for="cb-s6-28"
-              >Modelos: User, Project, Board, Column, Card, Comment</label
+              >Invitar colaboradores a un proyecto</label
             >
           </div>
         </li>
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s6-29" /><label for="cb-s6-29"
-              >JWT con SimpleJWT</label
+              >Commits descriptivos con conventional commits</label
             >
           </div>
         </li>
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s6-30" /><label for="cb-s6-30"
-              >Permisos por proyecto</label
+              >Código limpio: sin console.log, sin imports sin usar, sin
+              componentes muertos</label
             >
           </div>
         </li>
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s6-31" /><label for="cb-s6-31"
-              >Upload de avatares</label
+              >Lighthouse: +90 en performance y accesibilidad</label
             >
           </div>
         </li>
         <li>
           <div class="ci">
             <input type="checkbox" id="cb-s6-32" /><label for="cb-s6-32"
-              >Tasks en background (Django 6)</label
-            >
-          </div>
-        </li>
-      </ul>
-      <h4>Frontend (React 19 + Vite):</h4>
-      <ul class="cl" data-section="s6">
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-33" /><label for="cb-s6-33"
-              >Dashboard con boards tipo Kanban</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-34" /><label for="cb-s6-34"
-              >Drag &amp; drop de cards</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-35" /><label for="cb-s6-35"
-              >Auth completa</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-36" /><label for="cb-s6-36"
-              >Perfil editable</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-37" /><label for="cb-s6-37"
-              >Invitar colaboradores</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-38" /><label for="cb-s6-38"
-              >Dark mode</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-39" /><label for="cb-s6-39"
-              >100% responsive</label
-            >
-          </div>
-        </li>
-        <li>
-          <div class="ci">
-            <input type="checkbox" id="cb-s6-40" /><label for="cb-s6-40"
-              >Deploy en producción</label
+              >Sin secrets expuestos en el repo (API keys, contraseñas)</label
             >
           </div>
         </li>
@@ -2379,11 +2661,68 @@
         <td>Última</td>
       </tr>
       <tr>
+        <td>Tipado</td>
+        <td>TypeScript</td>
+        <td>5.7+</td>
+      </tr>
+      <tr>
+        <td>Testing</td>
+        <td>Vitest + RTL + pytest</td>
+        <td>—</td>
+      </tr>
+      <tr>
         <td>Deploy</td>
         <td>Vercel + Railway/Render</td>
         <td>—</td>
       </tr>
     </table>
+
+    <hr />
+
+    <h2>¿Qué sigue después?</h2>
+    <p>
+      Completar este plan te deja listo para un rol de
+      <b>Fullstack Developer Junior</b>. Desde ahí, tenés varias direcciones
+      para crecer:
+    </p>
+    <table>
+      <tr>
+        <th>Dirección</th>
+        <th>Qué aprender</th>
+        <th>Rol objetivo</th>
+      </tr>
+      <tr>
+        <td><b>Frontend avanzado</b></td>
+        <td>Next.js, SSR/SSG, animaciones, micro-frontends, performance</td>
+        <td>Senior Frontend</td>
+      </tr>
+      <tr>
+        <td><b>Backend avanzado</b></td>
+        <td>Celery, Redis, WebSockets, GraphQL, microservicios</td>
+        <td>Senior Backend</td>
+      </tr>
+      <tr>
+        <td><b>DevOps / Cloud</b></td>
+        <td>Docker, CI/CD, GitHub Actions, AWS/GCP, Kubernetes</td>
+        <td>DevOps / Platform Engineer</td>
+      </tr>
+      <tr>
+        <td><b>Mobile</b></td>
+        <td>React Native, Expo, app stores</td>
+        <td>Mobile Developer</td>
+      </tr>
+      <tr>
+        <td><b>Arquitectura</b></td>
+        <td>Design patterns, clean architecture, system design, testing avanzado</td>
+        <td>Tech Lead / Architect</td>
+      </tr>
+    </table>
+    <div class="tb">
+      <b>💡 Consejo:</b> No intentes aprender todo a la vez. Conseguí tu
+      primer trabajo como developer, y desde ahí vas a ver qué dirección te
+      entusiasma más según los problemas reales que enfrentes día a día. Docker
+      y CI/CD son probablemente lo más urgente para el día a día laboral.
+    </div>
 
     <br />
     <div
