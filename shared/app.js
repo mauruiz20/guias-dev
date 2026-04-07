@@ -57,12 +57,15 @@ function toggleDone(cb) {
 }
 
 function updateProgress() {
+  const bar = document.getElementById('globalBar')
+  if (!bar) return
+
   const all = document.querySelectorAll('input[type="checkbox"][id^="cb-"]')
   const checked = [...all].filter((c) => c.checked).length
   const total = all.length
   const pct = total ? Math.round((checked / total) * 100) : 0
 
-  document.getElementById('globalBar').style.width = pct + '%'
+  bar.style.width = pct + '%'
   document.getElementById('globalPercent').textContent = pct + '%'
   document.getElementById('globalCount').textContent =
     checked + ' / ' + total + ' completados'
@@ -131,8 +134,11 @@ function linkifyUrls() {
 
 function setupSectionNav() {
   const navChips = document.querySelectorAll('.nav-chip')
+  const progress = document.getElementById('globalProgress')
+  if (!navChips.length || !progress) return
+
   const sectionIds = [...navChips].map((chip) => chip.getAttribute('data-nav'))
-  const stickyHeight = document.getElementById('globalProgress').offsetHeight
+  const stickyHeight = progress.offsetHeight
 
   // Smooth scroll with offset for sticky header
   navChips.forEach((chip) => {
@@ -175,7 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
   updateProgress()
   setupSectionNav()
 
-  document.getElementById('themeToggle').addEventListener('click', toggleTheme)
+  const themeBtn = document.getElementById('themeToggle')
+  if (themeBtn) themeBtn.addEventListener('click', toggleTheme)
 
   document.addEventListener('change', (e) => {
     if (
