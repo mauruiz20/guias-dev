@@ -1,0 +1,2407 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Fullstack 2026</title>
+    <link rel="stylesheet" href="../shared/styles.css" />
+  </head>
+  <body>
+    <div class="progress-global" id="globalProgress">
+      <div class="progress-header">
+        <b style="font-size: 14px; color: var(--h1)">📊 Progreso General</b>
+        <span class="progress-meta">
+          <span id="globalCount" style="font-size: 13px; color: var(--text-muted)"></span>
+          <button class="reset-btn" onclick="resetProgress()">Resetear</button>
+          <button class="theme-toggle" id="themeToggle" title="Cambiar tema"></button>
+        </span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="globalBar" style="width: 0%"></div>
+        <div class="progress-text" id="globalPercent">0%</div>
+      </div>
+      <nav class="section-nav" id="sectionNav">
+        <a href="#sec-prep" class="nav-chip" data-nav="sec-prep">Prep</a>
+        <a href="#sec-s1" class="nav-chip" data-nav="sec-s1">S1</a>
+        <a href="#sec-s2" class="nav-chip" data-nav="sec-s2">S2</a>
+        <a href="#sec-s3" class="nav-chip" data-nav="sec-s3">S3</a>
+        <a href="#sec-s4" class="nav-chip" data-nav="sec-s4">S4</a>
+        <a href="#sec-s5" class="nav-chip" data-nav="sec-s5">S5</a>
+        <a href="#sec-s6" class="nav-chip" data-nav="sec-s6">S6</a>
+      </nav>
+    </div>
+
+    <div class="ctr">
+      <h1 style="font-size: 28px; border: none">
+        PLAN DE ESTUDIO<br />DESARROLLO WEB FULLSTACK 2026
+      </h1>
+      <p style="font-size: 16px; color: var(--text-muted)">
+        <b
+          >HTML5 → CSS3 + Tailwind → JavaScript → React 19 → Django 6 → Proyecto
+          Final</b
+        >
+      </p>
+      <p>Duración: <b>6 semanas</b> (+ preparación de entorno)</p>
+      <p>
+        <span class="tg">React 19.2</span><span class="tg">Vite</span
+        ><span class="tg">Tailwind v4</span><span class="tg">Django 6.0</span
+        ><span class="tg">DRF</span><span class="tg">PostgreSQL</span
+        ><span class="tg">JWT</span><span class="tg">Zustand</span
+        ><span class="tg">TanStack Query</span>
+      </p>
+    </div>
+    <hr />
+
+    <h2>Cómo usar este documento</h2>
+    <p>
+      Este plan está organizado en
+      <b>6 semanas + una etapa de preparación inicial</b>, cada una con una
+      estructura clara y repetible:
+    </p>
+    <ul>
+      <li><b>Objetivos</b> — lo que deberías dominar al terminar la semana.</li>
+      <li>
+        <b>Temario con checkboxes</b> — marcá cada tema a medida que lo
+        completes. Tu progreso se guarda automáticamente en el navegador.
+      </li>
+      <li>
+        <b>Proyecto de cierre</b> <span class="mt">Obligatorio</span> — no
+        avances a la siguiente semana sin completarlo.
+      </li>
+      <li>
+        <b>Videos recomendados</b> <span class="ot">Opcional</span> — material
+        en español para acompañar tu aprendizaje.
+      </li>
+      <li>
+        <b>Documentación oficial</b> <span class="ot">Lectura Opcional</span> —
+        las fuentes primarias de cada tecnología.
+      </li>
+    </ul>
+    <p>
+      Los temas no tienen todos la misma complejidad. HTML se absorbe rápido;
+      JavaScript y React requieren más práctica y repetición.
+    </p>
+
+    <hr />
+
+    <h2>Resumen General</h2>
+    <table>
+      <tr>
+        <th>Etapa</th>
+        <th>Contenido</th>
+        <th>Proyecto de Cierre</th>
+      </tr>
+      <tr>
+        <td><b>Prep</b></td>
+        <td>Preparación del entorno de trabajo</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 1</b></td>
+        <td>HTML5 + CSS3 + Tailwind CSS v4</td>
+        <td>Landing Page + Portfolio</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 2</b></td>
+        <td>JavaScript — Fundamentos, DOM y Estructuras</td>
+        <td rowspan="2">App de Gestión de Tareas</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 3</b></td>
+        <td>JavaScript — Asincronía y JS Avanzado</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 4</b></td>
+        <td>React 19 + Ecosistema Completo</td>
+        <td>Dashboard E-Commerce</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 5</b></td>
+        <td>Python + Django 6 + Django REST Framework</td>
+        <td>API REST Blog + Auth</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 6</b></td>
+        <td>Proyecto Final Fullstack: React 19 + Django 6</td>
+        <td>Plataforma Kanban</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <!-- ===================== PREPARACIÓN ===================== -->
+    <div class="mh" id="sec-prep">
+      <h1>
+        PREPARACIÓN: ENTORNO DE TRABAJO Y HERRAMIENTAS
+        <span class="section-progress" id="sp-prep"></span>
+      </h1>
+      <p>Completar antes de empezar la Semana 1</p>
+    </div>
+
+    <h2>Objetivo</h2>
+    <p>
+      Tener tu entorno de desarrollo completamente listo para que cuando
+      empieces la Semana 1, solo tengas que enfocarte en aprender.
+    </p>
+
+    <h3>Editor de código: Visual Studio Code</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-0" /><label for="cb-prep-0"
+            >Descargar e instalar VS Code: https://code.visualstudio.com</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-1" /><label for="cb-prep-1"
+            >Familiarizarte con la interfaz: explorador de archivos, terminal
+            integrada, paleta de comandos (<code>Ctrl+Shift+P</code>)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-2" /><label for="cb-prep-2"
+            >Configurar tema oscuro (o el que prefieras)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-3" /><label for="cb-prep-3"
+            >Activar Auto Save: File → Auto Save</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Extensiones de VS Code recomendadas</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-4" /><label for="cb-prep-4"
+            ><b>HTML CSS Support</b> — autocompletado de clases CSS en
+            HTML</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-5" /><label for="cb-prep-5"
+            ><b>Live Server</b> — servidor local con recarga automática</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-6" /><label for="cb-prep-6"
+            ><b>Prettier - Code Formatter</b> — formatea tu código
+            automáticamente</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-7" /><label for="cb-prep-7"
+            ><b>ESLint</b> — detecta errores y malas prácticas en
+            JS/React</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-8" /><label for="cb-prep-8"
+            ><b>Tailwind CSS IntelliSense</b> — autocompletado para
+            Tailwind</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-9" /><label for="cb-prep-9"
+            ><b>ES7+ React/Redux/React-Native snippets</b></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-10" /><label for="cb-prep-10"
+            ><b>Python</b> (Microsoft) — soporte completo para Python y
+            Django</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-11" /><label for="cb-prep-11"
+            ><b>Thunder Client</b> — cliente REST dentro de VS Code</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-12" /><label for="cb-prep-12"
+            ><b>Error Lens</b> — muestra errores directamente en la línea de
+            código</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-13" /><label for="cb-prep-13"
+            ><b>GitLens</b> — información de Git integrada en el editor</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Node.js y npm</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-14" /><label for="cb-prep-14"
+            >Descargar e instalar Node.js (versión LTS) desde
+            https://nodejs.org</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-15" /><label for="cb-prep-15"
+            >Asegurate de marcar "Add to PATH" durante la instalación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-16" /><label for="cb-prep-16"
+            >npm se instala automáticamente junto con Node.js</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Python</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-17" /><label for="cb-prep-17"
+            >Descargar e instalar Python 3.13+ desde
+            https://www.python.org/downloads/</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-18" /><label for="cb-prep-18"
+            >Marcar <b>"Add Python to PATH"</b> durante la instalación</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Git y GitHub</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-19" /><label for="cb-prep-19"
+            >Descargar e instalar Git desde https://git-scm.com/downloads</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-20" /><label for="cb-prep-20"
+            >Crear una cuenta en GitHub: https://github.com</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Navegador</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-21" /><label for="cb-prep-21"
+            >Usar Google Chrome como navegador de desarrollo</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Instalar todo ahora te evita interrupciones durante las
+      semanas de estudio.
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos útiles para el setup</h3>
+      <div class="vi">
+        <b>▶ VS Code: Configuración y extensiones - midudev</b><br />🔗
+        https://midu.dev/cursos
+      </div>
+      <div class="vi">
+        <b>▶ Git y GitHub desde CERO - HolaMundo</b><br />🔗
+        https://www.youtube.com/watch?v=VdGzPZ31ts8
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 1 ===================== -->
+    <div class="mh" id="sec-s1">
+      <h1>
+        SEMANA 1: HTML5 + CSS3 + TAILWIND CSS v4
+        <span class="section-progress" id="sp-s1"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Construir una página web completa, semántica, accesible y responsive
+      utilizando Tailwind CSS.
+    </p>
+
+    <h3>Día 1: HTML5 Completo</h3>
+    <p>
+      <i
+        >HTML se aprende rápido porque es declarativo. Un día de práctica
+        enfocada es suficiente.</i
+      >
+    </p>
+    <ul class="cl" data-section="s1">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-0" /><label for="cb-s1-0"
+            >Estructura del documento:
+            <code>DOCTYPE, head, body, meta</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-1" /><label for="cb-s1-1"
+            >Etiquetas de texto:
+            <code>h1-h6, p, span, strong, em, blockquote</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-2" /><label for="cb-s1-2"
+            >Listas: <code>ul, ol, dl</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-3" /><label for="cb-s1-3"
+            >Enlaces e imágenes: <code>a, img, figure, figcaption</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-4" /><label for="cb-s1-4"
+            >HTML semántico:
+            <code
+              >header, nav, main, section, article, aside, footer</code
+            ></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-5" /><label for="cb-s1-5"
+            >Tablas: <code>table, thead, tbody, caption, scope</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-6" /><label for="cb-s1-6"
+            >Formularios: <code>form, input</code> (todos los types),
+            <code>select, textarea, datalist</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-7" /><label for="cb-s1-7"
+            >Validación nativa: <code>required, pattern, min/max</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-8" /><label for="cb-s1-8"
+            >Multimedia: <code>video, audio, picture, srcset</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-9" /><label for="cb-s1-9"
+            >Meta tags:
+            <code>charset, viewport, description, og:tags</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-10" /><label for="cb-s1-10"
+            >Accesibilidad: roles ARIA, <code>aria-label, tabindex</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-11" /><label for="cb-s1-11"
+            >Herramientas: Lighthouse, validador W3C</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 2-3: CSS3 Fundamentos + Layouts</h3>
+    <p>
+      <i>CSS requiere más práctica que HTML, especialmente Flexbox y Grid.</i>
+    </p>
+    <ul class="cl" data-section="s1">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-12" /><label for="cb-s1-12"
+            >Selectores: elemento, clase, ID, atributo, pseudo-clases,
+            pseudo-elementos</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-13" /><label for="cb-s1-13"
+            >Box Model: <code>margin, padding, border, box-sizing</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-14" /><label for="cb-s1-14"
+            >Especificidad y cascada</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-15" /><label for="cb-s1-15"
+            >Unidades:
+            <code>px, rem, em, vw, vh, %, clamp(), min(), max()</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-16" /><label for="cb-s1-16"
+            >Variables CSS: <code>--color-primary, var()</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-17" /><label for="cb-s1-17"
+            >Tipografía: <code>font-family, @font-face</code>, Google
+            Fonts</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-18" /><label for="cb-s1-18"
+            >Flexbox completo:
+            <code>justify, align, wrap, grow, shrink, order, gap</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-19" /><label for="cb-s1-19"
+            >CSS Grid completo:
+            <code>template-rows/columns, areas, auto-fit, minmax()</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-20" /><label for="cb-s1-20"
+            >Cuándo usar Flexbox vs Grid (y combinarlos)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-21" /><label for="cb-s1-21"
+            >Media queries y Mobile First design</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-22" /><label for="cb-s1-22"
+            >Container queries (<code>@container</code>)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-23" /><label for="cb-s1-23"
+            >Animaciones:
+            <code>transition, @keyframes, animation, transform</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 4-5: Tailwind CSS v4</h3>
+    <p>
+      <i
+        >Con CSS fresco, Tailwind se entiende rápido: las mismas propiedades CSS
+        como clases utility.</i
+      >
+    </p>
+    <ul class="cl" data-section="s1">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-24" /><label for="cb-s1-24"
+            >Instalación y configuración de Tailwind CSS v4</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-25" /><label for="cb-s1-25"
+            >Filosofía utility-first</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-26" /><label for="cb-s1-26"
+            >Clases esenciales: spacing, typography, colors, flexbox,
+            grid</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-27" /><label for="cb-s1-27"
+            >Responsive con prefijos: <code>sm:, md:, lg:, xl:</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-28" /><label for="cb-s1-28"
+            >Dark mode con <code>dark:</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-29" /><label for="cb-s1-29"
+            >Componentes reutilizables con <code>@apply</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-30" /><label for="cb-s1-30"
+            >Tailwind + PostCSS: configuración profesional</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Proyecto de Cierre</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Landing Page + Portfolio
+        Responsive
+      </h3>
+      <ul class="cl" data-section="s1">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-31" /><label for="cb-s1-31"
+              >HTML5 semántico con roles ARIA y meta tags SEO</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-32" /><label for="cb-s1-32"
+              >100% responsive con Mobile First</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-33" /><label for="cb-s1-33"
+              >Construido con Tailwind CSS v4</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-34" /><label for="cb-s1-34"
+              >Hero section con gradiente y call-to-action</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-35" /><label for="cb-s1-35"
+              >Sección "Sobre mí" y grid de proyectos (mín. 6)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-36" /><label for="cb-s1-36"
+              >Formulario de contacto con validación nativa</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-37" /><label for="cb-s1-37"
+              >Footer con links</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-38" /><label for="cb-s1-38"
+              >Dark mode toggle funcional</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-39" /><label for="cb-s1-39"
+              >Lighthouse: +90 en accesibilidad</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-40" /><label for="cb-s1-40"
+              >Subir a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Curso de HTML y CSS desde CERO (24hs) - Soy Dalto</b><br />🔗
+        https://www.youtube.com/watch?v=ELSm-G201Ls
+      </div>
+      <div class="vi">
+        <b>▶ Curso de HTML desde CERO - midudev</b><br />🔗
+        https://www.youtube.com/watch?v=3nYLTiY5skU
+      </div>
+      <div class="vi">
+        <b>▶ Curso de CSS desde CERO (8hs) - midudev</b><br />🔗
+        https://midu.link/css
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li>
+          <b>MDN — HTML:</b> https://developer.mozilla.org/es/docs/Web/HTML
+        </li>
+        <li><b>MDN — CSS:</b> https://developer.mozilla.org/es/docs/Web/CSS</li>
+        <li><b>Tailwind CSS v4:</b> https://tailwindcss.com/docs</li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> HTML se aprende rápido — no le dediques más de un día. Usá
+      flexboxfroggy.com y cssgridgarden.com como refuerzo lúdico.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 2 ===================== -->
+    <div class="mh" id="sec-s2">
+      <h1>
+        SEMANA 2: JAVASCRIPT — FUNDAMENTOS, DOM Y ESTRUCTURAS
+        <span class="section-progress" id="sp-s2"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      JavaScript es el lenguaje que conecta todo. La curva es más pronunciada
+      que HTML/CSS, por eso dedicamos 2 semanas completas.
+    </p>
+
+    <h3>Día 1-2: Fundamentos del Lenguaje</h3>
+    <p>
+      <i
+        >Entender bien scope y closures ahora te ahorra dolores de cabeza con
+        React después.</i
+      >
+    </p>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-0" /><label for="cb-s2-0"
+            >Variables: <code>let, const</code> (nunca más <code>var</code>).
+            Hoisting y temporal dead zone</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-1" /><label for="cb-s2-1"
+            >Tipos primitivos:
+            <code
+              >string, number, boolean, null, undefined, symbol, bigint</code
+            ></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-2" /><label for="cb-s2-2"
+            >Operadores: aritméticos, comparación (<code>=== vs ==</code>),
+            lógicos, nullish coalescing (<code>??</code>)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-3" /><label for="cb-s2-3"
+            >Estructuras de control:
+            <code>if/else, switch, for, for...of, for...in, while</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-4" /><label for="cb-s2-4"
+            >Funciones: declaration, expression, arrow functions, parámetros
+            default</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-5" /><label for="cb-s2-5"
+            >Scope y closures</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 3-4: Estructuras de Datos y Métodos Modernos</h3>
+    <p>
+      <i
+        >Los métodos de array (map, filter, reduce) los vas a usar
+        constantemente en React.</i
+      >
+    </p>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-6" /><label for="cb-s2-6"
+            >Arrays:
+            <code
+              >map, filter, reduce, find, some, every, flat, at()</code
+            ></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-7" /><label for="cb-s2-7"
+            >Objetos: propiedades, métodos,
+            <code>Object.keys/values/entries</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-8" /><label for="cb-s2-8"
+            >Desestructuración de arrays y objetos</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-9" /><label for="cb-s2-9"
+            >Spread (<code>...</code>) y rest operator</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-10" /><label for="cb-s2-10"
+            >Template literals</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-11" /><label for="cb-s2-11"
+            >Sets y Maps — cuándo usar cada uno</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-12" /><label for="cb-s2-12"
+            >Optional chaining (<code>?.</code>) y nullish coalescing
+            (<code>??</code>)</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 5-6: DOM, Eventos y Manipulación</h3>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-13" /><label for="cb-s2-13"
+            >El DOM:
+            <code
+              >querySelector, getElementById, createElement, appendChild</code
+            ></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-14" /><label for="cb-s2-14"
+            >Eventos: <code>addEventListener</code>, event delegation, bubbling
+            vs capturing</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-15" /><label for="cb-s2-15"
+            >Modificar estilos y clases:
+            <code>classList.add/remove/toggle</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-16" /><label for="cb-s2-16"
+            >Crear elementos dinámicos y actualizar el DOM</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 7: Práctica y Refuerzo</h3>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-17" /><label for="cb-s2-17"
+            >Resolver mín. 10 ejercicios de arrays/objetos (exercism.org o
+            codewars.com)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-18" /><label for="cb-s2-18"
+            >Construir un mini componente interactivo con JS puro</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-19" /><label for="cb-s2-19"
+            >Repasar closures, scope y <code>this</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Curso de JAVASCRIPT desde CERO - Soy Dalto</b><br />🔗
+        https://www.youtube.com/watch?v=z95mZVUcJ-E
+      </div>
+      <div class="vi">
+        <b>▶ Aprende JavaScript — Curso Interactivo - midudev</b><br />🔗
+        https://aprendejavascript.dev
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li>
+          <b>MDN — JavaScript:</b>
+          https://developer.mozilla.org/es/docs/Web/JavaScript
+        </li>
+        <li><b>JavaScript.info:</b> https://javascript.info</li>
+        <li>
+          <b>Exercism JS Track:</b> https://exercism.org/tracks/javascript
+        </li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Si closures y los métodos de array te quedan claros, todo
+      lo que viene después se va a sentir natural.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 3 ===================== -->
+    <div class="mh" id="sec-s3">
+      <h1>
+        SEMANA 3: JAVASCRIPT — ASINCRONÍA + PROYECTO
+        <span class="section-progress" id="sp-s3"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Completar tu dominio de JavaScript con asincronía, modularización y una
+      app funcional completa con JS puro.
+    </p>
+
+    <h3>Día 1-3: Asincronía + JS Avanzado</h3>
+    <p>
+      <i
+        >La asincronía es uno de los temas que más cuesta. Dedicale tres días
+        sólidos.</i
+      >
+    </p>
+    <ul class="cl" data-section="s3">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-0" /><label for="cb-s3-0"
+            >Callbacks y el callback hell</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-1" /><label for="cb-s3-1"
+            >Promises:
+            <code
+              >new Promise, then, catch, finally, Promise.all,
+              Promise.allSettled</code
+            ></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-2" /><label for="cb-s3-2"
+            >Async/await: sintaxis moderna para asincronía</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-3" /><label for="cb-s3-3"
+            >Fetch API: GET, POST, headers, manejo de errores</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-4" /><label for="cb-s3-4"
+            >Consumir APIs reales: JSONPlaceholder, PokéAPI</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-5" /><label for="cb-s3-5"
+            >ES Modules: <code>import/export</code>, named vs default
+            exports</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-6" /><label for="cb-s3-6"
+            >Clases y prototipos (base conceptual para React)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-7" /><label for="cb-s3-7"
+            >Error handling: <code>try/catch</code>, custom errors</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-8" /><label for="cb-s3-8"
+            >JSON: <code>parse, stringify</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-9" /><label for="cb-s3-9"
+            ><code>localStorage</code> y <code>sessionStorage</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-10" /><label for="cb-s3-10"
+            >Debugging: console methods, DevTools, breakpoints</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-11" /><label for="cb-s3-11"
+            >Introducción a Node.js y npm</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 4-7: Proyecto de Cierre (Semanas 2-3)</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: App de Gestión de Tareas
+      </h3>
+      <p>JavaScript puro (sin frameworks):</p>
+      <ul class="cl" data-section="s3">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-12" /><label for="cb-s3-12"
+              >CRUD completo (Crear, Leer, Actualizar, Eliminar)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-13" /><label for="cb-s3-13"
+              >Filtrado por estado: todas / pendientes / completadas</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-14" /><label for="cb-s3-14"
+              >Búsqueda en tiempo real</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-15" /><label for="cb-s3-15"
+              >Persistencia con <code>localStorage</code></label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-16" /><label for="cb-s3-16"
+              >Drag &amp; drop para reordenar</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-17" /><label for="cb-s3-17"
+              >Tema oscuro / claro</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-18" /><label for="cb-s3-18"
+              >Consumir API externa (JSONPlaceholder)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-19" /><label for="cb-s3-19"
+              >Modularizado con ES Modules</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-20" /><label for="cb-s3-20"
+              >Subir a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 4 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Aprendiendo JavaScript con 100 proyectos - midudev</b><br />🔗
+        https://www.youtube.com/watch?v=B-kYNJhEBzk
+      </div>
+      <div class="vi">
+        <b>▶ Async/Await y Promesas - HolaMundo</b><br />🔗
+        https://www.youtube.com/watch?v=rKK1q7nFt7M
+      </div>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> El proyecto tiene 4 días asignados. Si terminás antes,
+      sumá features: categorías, prioridades, fecha de vencimiento.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 4 ===================== -->
+    <div class="mh" id="sec-s4">
+      <h1>
+        SEMANA 4: REACT 19 + ECOSISTEMA COMPLETO
+        <span class="section-progress" id="sp-s4"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Aprender React desde los fundamentos hasta un nivel productivo con hooks
+      de React 19, routing, estado global y herramientas profesionales.
+    </p>
+
+    <h3>Día 1-2: Fundamentos de React 19</h3>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-0" /><label for="cb-s4-0"
+            >¿Qué es React? Virtual DOM y reconciliación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-1" /><label for="cb-s4-1"
+            >Crear proyecto con Vite: <code>npm create vite@latest</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-2" /><label for="cb-s4-2"
+            >JSX: sintaxis, expresiones, renderizado condicional, listas con
+            <code>key</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-3" /><label for="cb-s4-3"
+            >Componentes funcionales: props, children, composición</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-4" /><label for="cb-s4-4"
+            ><code>useState</code>: estado local, actualizaciones</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-5" /><label for="cb-s4-5"
+            ><code>useEffect</code>: efectos secundarios, cleanup, dependency
+            array</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-6" /><label for="cb-s4-6"
+            >Eventos: <code>onClick, onChange, onSubmit</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 3: Hooks Avanzados</h3>
+    <div class="sb">
+      <h3>
+        <span class="mt">Lectura Obligatoria</span> Documentación oficial de
+        hooks
+      </h3>
+      <p>
+        Leé la documentación oficial de cada uno de estos hooks en
+        https://react.dev/reference/react — no copies código, entendé
+        <b>qué problema resuelve</b> cada uno:
+      </p>
+      <ul>
+        <li><code>useState</code> — estado local del componente</li>
+        <li><code>useEffect</code> — efectos secundarios, cleanup, dependency array</li>
+        <li><code>useRef</code> — referencias al DOM y valores persistentes entre renders</li>
+        <li><code>useMemo</code> y <code>useCallback</code> — memoización y optimización</li>
+        <li><code>useReducer</code> — estado complejo con acciones</li>
+        <li><code>useContext</code> — consumir contexto sin prop drilling</li>
+      </ul>
+    </div>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-7" /><label for="cb-s4-7"
+            ><code>useRef</code>: referencias al DOM y valores
+            persistentes</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-8" /><label for="cb-s4-8"
+            ><code>useMemo</code> y <code>useCallback</code>:
+            optimización</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-9" /><label for="cb-s4-9"
+            ><code>useReducer</code>: estado complejo con acciones</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-10" /><label for="cb-s4-10"
+            >Custom hooks: crear hooks reutilizables</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="sb">
+      <h3>
+        <span class="ot">Lectura Opcional</span> Hooks nuevos de React 19
+      </h3>
+      <p>
+        Estos hooks son nuevos en React 19. No son necesarios para empezar,
+        pero van a ser cada vez más comunes:
+      </p>
+      <ul>
+        <li><code>useActionState</code> — gestión de estados en formularios</li>
+        <li><code>useFormStatus</code> — estado de envío de formularios</li>
+        <li><code>useOptimistic</code> — actualizaciones optimistas de UI</li>
+        <li><code>use()</code> — leer promesas y contexto directamente</li>
+        <li>Actions: <code>&lt;form action={}&gt;</code></li>
+      </ul>
+    </div>
+
+    <h3>Día 4: Routing, Estado Global y Data Fetching</h3>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-16" /><label for="cb-s4-16"
+            >React Router v7:
+            <code>createBrowserRouter, RouterProvider</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-17" /><label for="cb-s4-17"
+            >Rutas: nested routes, layout routes</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-18" /><label for="cb-s4-18"
+            >Navegación:
+            <code>Link, NavLink, useNavigate, useParams</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-19" /><label for="cb-s4-19"
+            >Loaders y Actions de React Router</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-20" /><label for="cb-s4-20"
+            >Rutas protegidas y lazy loading con <code>Suspense</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-21" /><label for="cb-s4-21"
+            >Context API: <code>createContext, useContext</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-22" /><label for="cb-s4-22"
+            >Zustand: estado global minimalista</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-23" /><label for="cb-s4-23"
+            >TanStack Query: cache, invalidation, optimistic updates</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-24" /><label for="cb-s4-24"
+            >Variables de entorno: <code>.env</code>,
+            <code>VITE_API_URL</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 5-7: UI Profesional + Proyecto</h3>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-25" /><label for="cb-s4-25"
+            >Tailwind CSS en React + Vite</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-26" /><label for="cb-s4-26"
+            >Componentes UI: shadcn/ui</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-27" /><label for="cb-s4-27"
+            >Formularios: React Hook Form + Zod</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-28" /><label for="cb-s4-28"
+            >Notificaciones: react-hot-toast o sonner</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-29" /><label for="cb-s4-29"
+            >Testing: Vitest + React Testing Library</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-30" /><label for="cb-s4-30"
+            >Build y deploy en Vercel</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Dashboard de E-Commerce
+      </h3>
+      <p>React 19 + Vite + Tailwind + React Router v7:</p>
+      <ul class="cl" data-section="s4">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-31" /><label for="cb-s4-31"
+              >Autenticación simulada (login/logout con Context)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-32" /><label for="cb-s4-32"
+              >Listado de productos con paginación</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-33" /><label for="cb-s4-33"
+              >Búsqueda y filtros</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-34" /><label for="cb-s4-34"
+              >Detalle de producto</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-35" /><label for="cb-s4-35"
+              >Carrito con Zustand</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-36" /><label for="cb-s4-36"
+              >Formularios con React Hook Form + Zod</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-37" /><label for="cb-s4-37"
+              >Dark mode</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-38" /><label for="cb-s4-38"
+              >API: FakeStoreAPI o DummyJSON</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-39" /><label for="cb-s4-39"
+              >Hooks de React 19 aplicados</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-40" /><label for="cb-s4-40"
+              >Deploy en Vercel + subir a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 5 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Curso de React Completo (+15hs, 12 proyectos) - midudev</b><br />🔗
+        https://cursoreact.dev
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li><b>React:</b> https://react.dev</li>
+        <li><b>Vite:</b> https://vitejs.dev</li>
+        <li><b>React Router v7:</b> https://reactrouter.com</li>
+        <li><b>TanStack Query:</b> https://tanstack.com/query</li>
+        <li><b>Zustand:</b> https://zustand.docs.pmnd.rs</li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> React 19 incluye el React Compiler que optimiza re-renders
+      automáticamente. Enfocate en <code>useActionState</code> y
+      <code>useOptimistic</code>.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 5 ===================== -->
+    <div class="mh" id="sec-s5">
+      <h1>
+        SEMANA 5: PYTHON + DJANGO 6 + DRF
+        <span class="section-progress" id="sp-s5"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Aprender Python orientado al desarrollo web y construir una API REST
+      profesional con Django 6 y DRF.
+    </p>
+
+    <h3>Día 1: Python para Web (Crash Course)</h3>
+    <p><i>Si ya sabés JavaScript, Python se absorbe en un día.</i></p>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-0" /><label for="cb-s5-0"
+            >Sintaxis: variables, tipos, f-strings, operadores</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-1" /><label for="cb-s5-1"
+            >Estructuras: listas, diccionarios, tuplas, sets,
+            comprehensions</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-2" /><label for="cb-s5-2"
+            >Funciones: <code>*args, **kwargs</code>, decoradores, lambda</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-3" /><label for="cb-s5-3"
+            >POO: clases, herencia, <code>@property</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-4" /><label for="cb-s5-4"
+            >Módulos, pip, virtual environments (<code>venv</code>)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-5" /><label for="cb-s5-5"
+            >Type hints</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-6" /><label for="cb-s5-6"
+            >Excepciones y context managers (<code>with</code>)</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 2-3: Django 6 Fundamentos + DRF</h3>
+    <div class="sb">
+      <h3><span class="mt">Lectura Obligatoria</span> Documentación oficial</h3>
+      <p>
+        Tutorial oficial Django:
+        https://docs.djangoproject.com/en/6.0/intro/tutorial01/<br />DRF
+        Tutorial: https://www.django-rest-framework.org/tutorial/quickstart/
+      </p>
+    </div>
+    <div class="sb">
+      <h3>Instalación de PostgreSQL (Windows)</h3>
+      <ul class="cl" data-section="s5">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-7" /><label for="cb-s5-7"
+              >Descargar instalador desde
+              https://www.postgresql.org/download/windows/</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-8" /><label for="cb-s5-8"
+              >Recordar contraseña del usuario "postgres" y dejar marcado
+              pgAdmin 4</label
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-9" /><label for="cb-s5-9"
+            >Instalación: <code>python -m venv env</code>,
+            <code>pip install django</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-10" /><label for="cb-s5-10"
+            >Proyecto vs App: <code>startproject</code>,
+            <code>startapp</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-11" /><label for="cb-s5-11"
+            >Patrón MTV: Models, Templates, Views</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-12" /><label for="cb-s5-12"
+            >URLs: <code>path()</code>, <code>include()</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-13" /><label for="cb-s5-13"
+            >Modelos y ORM: Field types, relaciones (FK, M2M, OneToOne)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-14" /><label for="cb-s5-14"
+            >Migraciones: <code>makemigrations</code>,
+            <code>migrate</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-15" /><label for="cb-s5-15"
+            >Admin panel: register, ModelAdmin</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-16" /><label for="cb-s5-16"
+            ><span class="nt">Django 6</span> Template partials:
+            <code>{% partialdef %}</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-17" /><label for="cb-s5-17"
+            >Instalar y configurar DRF</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-18" /><label for="cb-s5-18"
+            >Serializers: <code>ModelSerializer</code>, validación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-19" /><label for="cb-s5-19"
+            >Views: <code>APIView</code>, <code>GenericAPIView</code>,
+            <code>ViewSets</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-20" /><label for="cb-s5-20"
+            >Routers: <code>DefaultRouter</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-21" /><label for="cb-s5-21"
+            >Paginación, filtros, búsqueda, ordering</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-22" /><label for="cb-s5-22"
+            >Documentación: drf-spectacular (Swagger)</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 4: Autenticación, Seguridad y DB</h3>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-23" /><label for="cb-s5-23"
+            >JWT: <code>djangorestframework-simplejwt</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-24" /><label for="cb-s5-24"
+            >Login, registro, refresh tokens, blacklist</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-25" /><label for="cb-s5-25"
+            >Permisos por objeto: IsOwner, custom</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-26" /><label for="cb-s5-26"
+            >CORS: <code>django-cors-headers</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-27" /><label for="cb-s5-27"
+            ><span class="nt">Django 6</span> Content Security Policy (CSP)
+            nativo</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-28" /><label for="cb-s5-28"
+            >Variables de entorno: <code>django-environ</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-29" /><label for="cb-s5-29"
+            >PostgreSQL: configuración con Django</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-30" /><label for="cb-s5-30"
+            >Queries avanzadas: <code>annotate, aggregate, Q, F</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-31" /><label for="cb-s5-31"
+            >Optimización: <code>select_related, prefetch_related</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-32" /><label for="cb-s5-32"
+            ><span class="nt">Django 6</span> Tasks framework:
+            <code>@task</code>, <code>enqueue()</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-33" /><label for="cb-s5-33"
+            >Upload de archivos: <code>ImageField, FileField</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-34" /><label for="cb-s5-34"
+            >Testing: <code>TestCase, APITestCase</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 5-7: Proyecto de Cierre</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: API REST para Blog con
+        Autenticación
+      </h3>
+      <ul class="cl" data-section="s5">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-35" /><label for="cb-s5-35"
+              >Modelos: User (custom), Post, Category, Comment</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-36" /><label for="cb-s5-36"
+              >Endpoints CRUD completos</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-37" /><label for="cb-s5-37"
+              >JWT: registro, login, refresh</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-38" /><label for="cb-s5-38"
+              >Permisos: solo el autor edita/borra</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-39" /><label for="cb-s5-39"
+              >Paginación y filtros</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-40" /><label for="cb-s5-40"
+              >Búsqueda por título</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-41" /><label for="cb-s5-41"
+              >Upload de imágenes</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-42" /><label for="cb-s5-42"
+              >Subir a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 6 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Curso de Python desde CERO - Soy Dalto</b><br />🔗
+        https://www.youtube.com/watch?v=nKPbfIU442g
+      </div>
+      <div class="vi">
+        <b>▶ Django REST Framework - Fazt</b><br />🔗
+        https://www.youtube.com/watch?v=GE0Q7nfoyVE
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li><b>Django 6.0:</b> https://docs.djangoproject.com/en/6.0/</li>
+        <li><b>DRF:</b> https://www.django-rest-framework.org</li>
+        <li><b>Python:</b> https://docs.python.org/3/</li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Django 6 incorpora el Tasks framework integrado y soporte
+      nativo de CSP. El desafío real es aprender el ORM de Django y la lógica de
+      DRF.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 6 ===================== -->
+    <div class="mh" id="sec-s6">
+      <h1>
+        SEMANA 6: PROYECTO FINAL — REACT 19 + DJANGO 6
+        <span class="section-progress" id="sp-s6"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Integrar todo en una aplicación fullstack real. Este proyecto es tu carta
+      de presentación profesional.
+    </p>
+
+    <h3>Día 1: Arquitectura y Setup</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-0" /><label for="cb-s6-0"
+            >Planificación: wireframes, modelo de datos, endpoints</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-1" /><label for="cb-s6-1"
+            >Repos separados (frontend / backend)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-2" /><label for="cb-s6-2"
+            >Backend: Django 6 + DRF + PostgreSQL + JWT + CORS</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-3" /><label for="cb-s6-3"
+            >Frontend: React 19 + Vite + Tailwind v4 + React Router v7</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-4" /><label for="cb-s6-4"
+            >Git: repos, <code>.gitignore</code>, primer commit</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-5" /><label for="cb-s6-5"
+            >Variables de entorno: <code>.env</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 2-3: Backend Completo</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-6" /><label for="cb-s6-6"
+            >Modelos con relaciones y validaciones</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-7" /><label for="cb-s6-7"
+            >Serializers con nested data</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-8" /><label for="cb-s6-8"
+            >ViewSets con permisos granulares</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-9" /><label for="cb-s6-9"
+            >JWT: registro, login, refresh, logout</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-10" /><label for="cb-s6-10"
+            >Filtros, búsqueda, paginación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-11" /><label for="cb-s6-11"
+            >Upload de archivos</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-12" /><label for="cb-s6-12"
+            >Tests para endpoints críticos</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 4-5: Frontend Completo</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-13" /><label for="cb-s6-13"
+            >Axios con interceptores JWT</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-14" /><label for="cb-s6-14"
+            >AuthContext: login, logout, rutas protegidas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-15" /><label for="cb-s6-15"
+            >Páginas: Home, Login, Register, Dashboard, Detail, Profile</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-16" /><label for="cb-s6-16"
+            >Formularios: React Hook Form + Zod + Actions React 19</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-17" /><label for="cb-s6-17"
+            >Estado global con Zustand</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-18" /><label for="cb-s6-18"
+            >TanStack Query: cache, invalidación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-19" /><label for="cb-s6-19"
+            >Responsive con Tailwind v4</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-20" /><label for="cb-s6-20"
+            >Error handling: error boundaries, toasts</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Testing, Deploy y Pulido</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-21" /><label for="cb-s6-21"
+            >Testing frontend: Vitest + Testing Library</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-22" /><label for="cb-s6-22"
+            >Testing backend: pytest-django</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-23" /><label for="cb-s6-23"
+            >Deploy backend: Railway o Render</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-24" /><label for="cb-s6-24"
+            >Deploy frontend: Vercel o Netlify</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-25" /><label for="cb-s6-25"
+            >README profesional con screenshots</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-26" /><label for="cb-s6-26"
+            >Demo: video corto recorriendo la app</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto Final: Plataforma Kanban
+      </h3>
+      <h4>Backend (Django 6 + DRF):</h4>
+      <ul class="cl" data-section="s6">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-27" /><label for="cb-s6-27"
+              >API REST con DRF</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-28" /><label for="cb-s6-28"
+              >Modelos: User, Project, Board, Column, Card, Comment</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-29" /><label for="cb-s6-29"
+              >JWT con SimpleJWT</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-30" /><label for="cb-s6-30"
+              >Permisos por proyecto</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-31" /><label for="cb-s6-31"
+              >Upload de avatares</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-32" /><label for="cb-s6-32"
+              >Tasks en background (Django 6)</label
+            >
+          </div>
+        </li>
+      </ul>
+      <h4>Frontend (React 19 + Vite):</h4>
+      <ul class="cl" data-section="s6">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-33" /><label for="cb-s6-33"
+              >Dashboard con boards tipo Kanban</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-34" /><label for="cb-s6-34"
+              >Drag &amp; drop de cards</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-35" /><label for="cb-s6-35"
+              >Auth completa</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-36" /><label for="cb-s6-36"
+              >Perfil editable</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-37" /><label for="cb-s6-37"
+              >Invitar colaboradores</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-38" /><label for="cb-s6-38"
+              >Dark mode</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-39" /><label for="cb-s6-39"
+              >100% responsive</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-40" /><label for="cb-s6-40"
+              >Deploy en producción</label
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Bootcamp Fullstack JS - midudev</b><br />🔗 https://jscamp.dev
+      </div>
+      <div class="vi">
+        <b>▶ Git y GitHub - HolaMundo</b><br />🔗
+        https://www.youtube.com/watch?v=VdGzPZ31ts8
+      </div>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Este proyecto es tu carta de presentación. Commits
+      descriptivos, código organizado, README con screenshots, deploy funcional.
+    </div>
+
+    <hr />
+
+    <h1>REFERENCIAS Y RECOMENDACIONES FINALES</h1>
+
+    <h2>Metodología Sugerida</h2>
+    <ul>
+      <li><b>Regla 80/20:</b> 20% teoría + 80% práctica.</li>
+      <li>
+        <b>No avances sin entender:</b> usá los checkboxes para identificar
+        puntos débiles.
+      </li>
+      <li><b>Escribí código todos los días.</b></li>
+      <li><b>Git desde el día 1:</b> commiteá todo.</li>
+      <li>
+        <b>La documentación oficial es tu mejor amiga</b> — los videos son
+        complemento.
+      </li>
+    </ul>
+
+    <h2>Creadores de Contenido Recomendados</h2>
+    <table>
+      <tr>
+        <th>Creador</th>
+        <th>Plataforma</th>
+        <th>Fuerte en</th>
+      </tr>
+      <tr>
+        <td>midudev</td>
+        <td>YouTube / midu.dev / cursoreact.dev</td>
+        <td>React, JS, CSS, Tailwind, fullstack</td>
+      </tr>
+      <tr>
+        <td>Soy Dalto</td>
+        <td>YouTube</td>
+        <td>HTML, CSS, JavaScript, Python desde cero</td>
+      </tr>
+      <tr>
+        <td>HolaMundo</td>
+        <td>YouTube</td>
+        <td>Conceptos avanzados, Git, asincronía</td>
+      </tr>
+      <tr>
+        <td>FreeCodeCamp ES</td>
+        <td>YouTube</td>
+        <td>Cursos extensos y gratuitos</td>
+      </tr>
+    </table>
+
+    <h2>Tech Stack Completo</h2>
+    <table>
+      <tr>
+        <th>Categoría</th>
+        <th>Tecnología</th>
+        <th>Versión</th>
+      </tr>
+      <tr>
+        <td>Framework Frontend</td>
+        <td>React</td>
+        <td>19.2</td>
+      </tr>
+      <tr>
+        <td>Bundler</td>
+        <td>Vite</td>
+        <td>6+</td>
+      </tr>
+      <tr>
+        <td>CSS Framework</td>
+        <td>Tailwind CSS</td>
+        <td>v4</td>
+      </tr>
+      <tr>
+        <td>Routing</td>
+        <td>React Router</td>
+        <td>v7</td>
+      </tr>
+      <tr>
+        <td>Estado Global</td>
+        <td>Zustand</td>
+        <td>5+</td>
+      </tr>
+      <tr>
+        <td>Data Fetching</td>
+        <td>TanStack Query</td>
+        <td>v5</td>
+      </tr>
+      <tr>
+        <td>Framework Backend</td>
+        <td>Django</td>
+        <td>6.0</td>
+      </tr>
+      <tr>
+        <td>API</td>
+        <td>Django REST Framework</td>
+        <td>3.15+</td>
+      </tr>
+      <tr>
+        <td>Base de Datos</td>
+        <td>PostgreSQL</td>
+        <td>16+</td>
+      </tr>
+      <tr>
+        <td>Autenticación</td>
+        <td>SimpleJWT</td>
+        <td>Última</td>
+      </tr>
+      <tr>
+        <td>Deploy</td>
+        <td>Vercel + Railway/Render</td>
+        <td>—</td>
+      </tr>
+    </table>
+
+    <br />
+    <div
+      style="
+        text-align: center;
+        padding: 28px;
+        background: var(--accent-light);
+        border-radius: 12px;
+      "
+    >
+      <p style="font-size: 18px; font-weight: 700; color: var(--h2)">
+        ¡Éxitos en tu camino como Web Developer! 🚀
+      </p>
+      <p style="color: var(--h4)">
+        Tu progreso se guarda automáticamente en este navegador
+      </p>
+    </div>
+
+    <script src="../shared/app.js"></script>
+  </body>
+</html>
