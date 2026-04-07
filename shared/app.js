@@ -1,5 +1,9 @@
-const STORAGE_KEY = 'plan-fullstack-2026-progress'
-const THEME_KEY = 'plan-fullstack-2026-theme'
+const THEME_KEY = 'guias-dev-theme'
+
+function getStorageKey() {
+  const guide = document.body.getAttribute('data-guide')
+  return guide ? `guide-progress-${guide}` : null
+}
 
 function initTheme() {
   const saved = localStorage.getItem(THEME_KEY)
@@ -20,19 +24,22 @@ function toggleTheme() {
   applyTheme(current === 'dark' ? 'light' : 'dark')
 }
 
-const sections = {
-  prep: { label: 'Preparacion', el: 'sp-prep' },
-  s1: { label: 'Semana 1', el: 'sp-s1' },
-  s2: { label: 'Semana 2', el: 'sp-s2' },
-  s3: { label: 'Semana 3', el: 'sp-s3' },
-  s4: { label: 'Semana 4', el: 'sp-s4' },
-  s5: { label: 'Semana 5', el: 'sp-s5' },
-  s6: { label: 'Semana 6', el: 'sp-s6' },
+function detectSections() {
+  const sections = {}
+  document.querySelectorAll('.section-progress').forEach((sp) => {
+    const id = sp.id
+    if (!id || !id.startsWith('sp-')) return
+    const key = id.replace('sp-', '')
+    sections[key] = { el: id }
+  })
+  return sections
 }
 
 function loadProgress() {
+  const key = getStorageKey()
+  if (!key) return
   try {
-    const d = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}')
+    const d = JSON.parse(localStorage.getItem(key) || '{}')
     Object.keys(d).forEach((id) => {
       const cb = document.getElementById(id)
       if (cb) {
@@ -44,11 +51,13 @@ function loadProgress() {
 }
 
 function saveProgress() {
+  const key = getStorageKey()
+  if (!key) return
   const d = {}
   document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
     if (cb.id && cb.id.startsWith('cb-')) d[cb.id] = cb.checked
   })
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(d))
+  localStorage.setItem(key, JSON.stringify(d))
 }
 
 function toggleDone(cb) {
@@ -70,6 +79,7 @@ function updateProgress() {
   document.getElementById('globalCount').textContent =
     checked + ' / ' + total + ' completados'
 
+  const sections = detectSections()
   Object.keys(sections).forEach((key) => {
     const cbs = document.querySelectorAll(
       '[data-section="' + key + '"] input[type="checkbox"]'
@@ -82,10 +92,11 @@ function updateProgress() {
 }
 
 function resetProgress() {
+  const key = getStorageKey()
   if (
     confirm('¿Estas seguro? Se borraran todos los checkboxes marcados.')
   ) {
-    localStorage.removeItem(STORAGE_KEY)
+    if (key) localStorage.removeItem(key)
     document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
       cb.checked = false
       toggleDone(cb)
@@ -140,7 +151,6 @@ function setupSectionNav() {
   const sectionIds = [...navChips].map((chip) => chip.getAttribute('data-nav'))
   const stickyHeight = progress.offsetHeight
 
-  // Smooth scroll with offset for sticky header
   navChips.forEach((chip) => {
     chip.addEventListener('click', (e) => {
       e.preventDefault()
@@ -152,7 +162,6 @@ function setupSectionNav() {
     })
   })
 
-  // Highlight active section on scroll
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -172,7 +181,6 @@ function setupSectionNav() {
   })
 }
 
-// Apply theme before DOMContentLoaded to avoid flash
 initTheme()
 
 document.addEventListener('DOMContentLoaded', () => {

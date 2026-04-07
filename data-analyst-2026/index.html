@@ -1,0 +1,2048 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Data Analyst 2026</title>
+    <link rel="stylesheet" href="../shared/styles.css" />
+  </head>
+  <body data-guide="data-analyst-2026">
+    <div class="progress-global" id="globalProgress">
+      <div class="progress-header">
+        <b style="font-size: 14px; color: var(--h1)">📊 Progreso General</b>
+        <span class="progress-meta">
+          <span id="globalCount" style="font-size: 13px; color: var(--text-muted)"></span>
+          <button class="reset-btn" onclick="resetProgress()">Resetear</button>
+          <button class="theme-toggle" id="themeToggle" title="Cambiar tema"></button>
+        </span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="globalBar" style="width: 0%"></div>
+        <div class="progress-text" id="globalPercent">0%</div>
+      </div>
+      <nav class="section-nav" id="sectionNav">
+        <a href="#sec-prep" class="nav-chip" data-nav="sec-prep">Prep</a>
+        <a href="#sec-s1" class="nav-chip" data-nav="sec-s1">S1</a>
+        <a href="#sec-s2" class="nav-chip" data-nav="sec-s2">S2</a>
+        <a href="#sec-s3" class="nav-chip" data-nav="sec-s3">S3</a>
+        <a href="#sec-s4" class="nav-chip" data-nav="sec-s4">S4</a>
+        <a href="#sec-s5" class="nav-chip" data-nav="sec-s5">S5</a>
+        <a href="#sec-s6" class="nav-chip" data-nav="sec-s6">S6</a>
+      </nav>
+    </div>
+
+    <div class="ctr">
+      <h1 style="font-size: 28px; border: none">
+        PLAN DE ESTUDIO<br />DATA ANALYST 2026
+      </h1>
+      <p style="font-size: 16px; color: var(--text-muted)">
+        <b
+          >Excel → SQL → Python → Pandas → Visualización → Power BI → Proyecto
+          Final</b
+        >
+      </p>
+      <p>Duración: <b>6 semanas</b> (+ preparación de entorno)</p>
+      <p>
+        <span class="tg">Excel</span><span class="tg">SQL</span
+        ><span class="tg">PostgreSQL</span><span class="tg">Python</span
+        ><span class="tg">Pandas</span><span class="tg">NumPy</span
+        ><span class="tg">Matplotlib</span><span class="tg">Seaborn</span
+        ><span class="tg">Power BI</span>
+      </p>
+    </div>
+    <hr />
+
+    <h2>Cómo usar este documento</h2>
+    <p>
+      Este plan está organizado en
+      <b>6 semanas + una etapa de preparación inicial</b>, cada una con una
+      estructura clara y repetible:
+    </p>
+    <ul>
+      <li><b>Objetivos</b> — lo que deberías dominar al terminar la semana.</li>
+      <li>
+        <b>Temario con checkboxes</b> — marcá cada tema a medida que lo
+        completes. Tu progreso se guarda automáticamente en el navegador.
+      </li>
+      <li>
+        <b>Proyecto de cierre</b> <span class="mt">Obligatorio</span> — no
+        avances a la siguiente semana sin completarlo.
+      </li>
+      <li>
+        <b>Videos recomendados</b> <span class="ot">Opcional</span> — material
+        en español para acompañar tu aprendizaje.
+      </li>
+      <li>
+        <b>Documentación oficial</b> <span class="ot">Lectura Opcional</span> —
+        las fuentes primarias de cada tecnología.
+      </li>
+    </ul>
+    <p>
+      Los temas no tienen todos la misma complejidad. Excel y SQL se absorben
+      relativamente rápido; Python con Pandas y las visualizaciones requieren más
+      práctica y repetición.
+    </p>
+
+    <hr />
+
+    <h2>Resumen General</h2>
+    <table>
+      <tr>
+        <th>Etapa</th>
+        <th>Contenido</th>
+        <th>Proyecto de Cierre</th>
+      </tr>
+      <tr>
+        <td><b>Prep</b></td>
+        <td>Preparación del entorno de trabajo</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 1</b></td>
+        <td>Estadística Descriptiva + Excel/Sheets</td>
+        <td>Dashboard en Excel con Tablas Dinámicas</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 2</b></td>
+        <td>SQL — Consultas y Análisis</td>
+        <td>Análisis SQL con JOINs, CTEs y Window Functions</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 3</b></td>
+        <td>Python para Datos — Fundamentos</td>
+        <td>Exploración y Limpieza con Pandas en Jupyter</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 4</b></td>
+        <td>Pandas Avanzado + Visualización</td>
+        <td>EDA Completo con Matplotlib, Seaborn y Plotly</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 5</b></td>
+        <td>Power BI + Data Storytelling</td>
+        <td>Dashboard Interactivo con DAX y Storytelling</td>
+      </tr>
+      <tr>
+        <td><b>Sem. 6</b></td>
+        <td>Proyecto Final End-to-End</td>
+        <td>Análisis Completo: SQL + Python + Power BI + Presentación</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <!-- ===================== PREPARACIÓN ===================== -->
+    <div class="mh" id="sec-prep">
+      <h1>
+        PREPARACIÓN: ENTORNO DE TRABAJO
+        <span class="section-progress" id="sp-prep"></span>
+      </h1>
+      <p>Completar antes de empezar la Semana 1</p>
+    </div>
+
+    <h2>Objetivo</h2>
+    <p>
+      Tener tu entorno de desarrollo completamente listo para que cuando
+      empieces la Semana 1, solo tengas que enfocarte en aprender.
+    </p>
+
+    <h3>Python 3.13+</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-0" /><label for="cb-prep-0"
+            >Descargar e instalar Python 3.13+ desde
+            https://www.python.org/downloads/</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-1" /><label for="cb-prep-1"
+            >Marcar <b>"Add Python to PATH"</b> durante la instalación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-2" /><label for="cb-prep-2"
+            >Verificar en terminal: <code>python --version</code> y
+            <code>pip --version</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Visual Studio Code + Extensiones</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-3" /><label for="cb-prep-3"
+            >Descargar e instalar VS Code: https://code.visualstudio.com</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-4" /><label for="cb-prep-4"
+            ><b>Python</b> (Microsoft) — soporte completo para Python</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-5" /><label for="cb-prep-5"
+            ><b>Jupyter</b> (Microsoft) — ejecutar notebooks dentro de VS
+            Code</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-6" /><label for="cb-prep-6"
+            ><b>SQLTools</b> + <b>SQLTools PostgreSQL</b> — ejecutar queries
+            SQL desde VS Code</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-7" /><label for="cb-prep-7"
+            ><b>Excel Viewer</b> — visualizar archivos CSV y Excel</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-8" /><label for="cb-prep-8"
+            ><b>Error Lens</b> — muestra errores directamente en la línea de
+            código</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Jupyter Notebook</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-9" /><label for="cb-prep-9"
+            >Instalar Jupyter Notebook: <code>pip install notebook</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-10" /><label for="cb-prep-10"
+            >Instalar JupyterLab: <code>pip install jupyterlab</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-11" /><label for="cb-prep-11"
+            >Verificar que funciona: <code>jupyter lab</code> en terminal</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>PostgreSQL + pgAdmin</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-12" /><label for="cb-prep-12"
+            >Descargar e instalar PostgreSQL 16+ desde
+            https://www.postgresql.org/download/</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-13" /><label for="cb-prep-13"
+            >Instalar pgAdmin 4 (viene incluido en el instalador de
+            PostgreSQL)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-14" /><label for="cb-prep-14"
+            >Crear una base de datos de prueba y verificar conexión</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Power BI / Alternativa</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-15" /><label for="cb-prep-15"
+            ><b>Windows:</b> Descargar Power BI Desktop desde
+            https://powerbi.microsoft.com/es-es/desktop/</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-16" /><label for="cb-prep-16"
+            ><b>Mac/Linux:</b> Usá Looker Studio (web, gratuito):
+            https://lookerstudio.google.com</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Git y GitHub</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-17" /><label for="cb-prep-17"
+            >Descargar e instalar Git: https://git-scm.com</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-18" /><label for="cb-prep-18"
+            >Crear cuenta en GitHub: https://github.com</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-19" /><label for="cb-prep-19"
+            >Configurar Git:
+            <code>git config --global user.name "Tu Nombre"</code> y
+            <code>git config --global user.email "tu@email.com"</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Carpeta de trabajo</h3>
+    <ul class="cl" data-section="prep">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-20" /><label for="cb-prep-20"
+            >Crear carpeta <code>data-analyst-2026/</code> con subcarpetas:
+            <code>datasets/</code>, <code>notebooks/</code>,
+            <code>sql/</code>, <code>dashboards/</code></label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-prep-21" /><label for="cb-prep-21"
+            >Instalar librerías base:
+            <code>pip install pandas numpy matplotlib seaborn plotly
+            openpyxl</code></label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Instalar todo ahora te evita interrupciones durante las
+      semanas de estudio. Si algo falla, buscá el error exacto en Google o
+      Stack Overflow antes de seguir.
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos útiles para el setup</h3>
+      <div class="vi">
+        <b>▶ VS Code: Configuración y extensiones - midudev</b><br />🔗
+        https://midu.dev/cursos
+      </div>
+      <div class="vi">
+        <b>▶ Git y GitHub desde CERO - HolaMundo</b><br />🔗
+        https://www.youtube.com/watch?v=VdGzPZ31ts8
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 1 ===================== -->
+    <div class="mh" id="sec-s1">
+      <h1>
+        SEMANA 1: ESTADÍSTICA DESCRIPTIVA + EXCEL/SHEETS
+        <span class="section-progress" id="sp-s1"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Entender estadística fundamental y dominar Excel/Google Sheets como
+      herramienta de análisis. La estadística es el cimiento de todo lo que
+      viene después — sin ella, los datos no significan nada.
+    </p>
+
+    <h3>Día 1-2: Estadística Descriptiva</h3>
+    <ul class="cl" data-section="s1">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-0" /><label for="cb-s1-0"
+            >Tipos de datos: cualitativos (nominales, ordinales) vs
+            cuantitativos (discretos, continuos)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-1" /><label for="cb-s1-1"
+            >Medidas de tendencia central: media, mediana, moda</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-2" /><label for="cb-s1-2"
+            >Medidas de dispersión: rango, varianza, desviación estándar</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-3" /><label for="cb-s1-3"
+            >Distribución normal y distribuciones sesgadas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-4" /><label for="cb-s1-4"
+            >Percentiles, cuartiles y boxplots</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-5" /><label for="cb-s1-5"
+            >Outliers: detección con IQR (rango intercuartílico)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-6" /><label for="cb-s1-6"
+            >Correlación vs causalidad — que dos variables se muevan juntas NO
+            significa que una cause la otra</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 3-5: Excel/Google Sheets para Análisis</h3>
+    <ul class="cl" data-section="s1">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-7" /><label for="cb-s1-7"
+            >Funciones esenciales: BUSCARV, SI, CONTAR.SI, SUMAR.SI,
+            PROMEDIO.SI</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-8" /><label for="cb-s1-8"
+            >Funciones de texto: CONCATENAR, IZQUIERDA, DERECHA, LARGO</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-9" /><label for="cb-s1-9"
+            >Tablas dinámicas (Pivot Tables): crear, filtrar, agrupar</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-10" /><label for="cb-s1-10"
+            >Gráficos: barras, líneas, dispersión, histogramas, circular</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-11" /><label for="cb-s1-11"
+            >Formato condicional y reglas personalizadas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-12" /><label for="cb-s1-12"
+            >Validación de datos y listas desplegables</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-13" /><label for="cb-s1-13"
+            >Importar datos: CSV, web scraping con IMPORTDATA (Google
+            Sheets)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s1-14" /><label for="cb-s1-14"
+            >Funciones de fecha: HOY, AÑO, MES, DIAS</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Proyecto de Cierre</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Dashboard en Excel con
+        Datos Reales
+      </h3>
+      <ul class="cl" data-section="s1">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-15" /><label for="cb-s1-15"
+              >Descargar dataset real (ej: datos de ventas de Kaggle o datos
+              abiertos)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-16" /><label for="cb-s1-16"
+              >Limpieza de datos en Excel: duplicados, nulos, formatos
+              incorrectos</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-17" /><label for="cb-s1-17"
+              >Crear tablas dinámicas con filtros y segmentación</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-18" /><label for="cb-s1-18"
+              >Dashboard con mínimo 4 gráficos distintos</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-19" /><label for="cb-s1-19"
+              >Insights escritos: mínimo 3 conclusiones basadas en los
+              datos</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s1-20" /><label for="cb-s1-20"
+              >Subir a Google Drive o GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 2 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Estadística Descriptiva desde CERO - Matemáticas profe Alex</b
+        ><br />🔗 https://www.youtube.com/watch?v=gHnS0LqKN0s
+      </div>
+      <div class="vi">
+        <b>▶ Excel desde cero hasta avanzado - El Tío Tech</b><br />🔗
+        https://www.youtube.com/watch?v=xGMKY7zRZCk
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li>
+          <b>Khan Academy — Estadística:</b>
+          https://es.khanacademy.org/math/statistics-probability
+        </li>
+        <li>
+          <b>Google Sheets:</b> https://support.google.com/docs
+        </li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> La estadística es el cimiento de TODO en análisis de
+      datos. Sin entender media, mediana, dispersión y correlación, cualquier
+      gráfico o dashboard que hagas es decoración vacía.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 2 ===================== -->
+    <div class="mh" id="sec-s2">
+      <h1>
+        SEMANA 2: SQL — CONSULTAS Y ANÁLISIS
+        <span class="section-progress" id="sp-s2"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Dominar SQL como herramienta principal de extracción y análisis de datos.
+      SQL es el idioma universal de los datos — si no sabés SQL, no sos data
+      analyst.
+    </p>
+
+    <h3>Día 1-2: SQL Fundamentos</h3>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-0" /><label for="cb-s2-0"
+            >SELECT, FROM, WHERE</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-1" /><label for="cb-s2-1"
+            >Operadores: =, &lt;&gt;, &gt;, &lt;, BETWEEN, IN, LIKE, NOT</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-2" /><label for="cb-s2-2"
+            >ORDER BY, LIMIT, OFFSET</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-3" /><label for="cb-s2-3"
+            >Funciones de agregación: COUNT, SUM, AVG, MIN, MAX</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-4" /><label for="cb-s2-4"
+            >GROUP BY y HAVING</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-5" /><label for="cb-s2-5"
+            >NULL: IS NULL, IS NOT NULL, COALESCE</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-6" /><label for="cb-s2-6"
+            >DISTINCT</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-7" /><label for="cb-s2-7"
+            >Alias: AS</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 3-4: SQL Intermedio</h3>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-8" /><label for="cb-s2-8"
+            >JOINs: INNER, LEFT, RIGHT, FULL OUTER</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-9" /><label for="cb-s2-9"
+            >Subqueries en WHERE y FROM</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-10" /><label for="cb-s2-10"
+            >CTEs: WITH ... AS — queries legibles y reutilizables</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-11" /><label for="cb-s2-11"
+            >CASE WHEN ... THEN ... ELSE ... END</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-12" /><label for="cb-s2-12"
+            >UNION, UNION ALL, INTERSECT, EXCEPT</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-13" /><label for="cb-s2-13"
+            >Funciones de fecha: EXTRACT, DATE_TRUNC, AGE, NOW()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-14" /><label for="cb-s2-14"
+            >Funciones de texto: UPPER, LOWER, TRIM, SUBSTRING, CONCAT</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-15" /><label for="cb-s2-15"
+            >CAST y conversión de tipos</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 5: SQL Avanzado para Análisis</h3>
+    <ul class="cl" data-section="s2">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-16" /><label for="cb-s2-16"
+            >Window functions: ROW_NUMBER(), RANK(), DENSE_RANK()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-17" /><label for="cb-s2-17"
+            >LAG(), LEAD() — comparar filas anteriores/siguientes</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-18" /><label for="cb-s2-18"
+            >SUM() OVER, AVG() OVER — acumulados y promedios móviles</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-19" /><label for="cb-s2-19"
+            >PARTITION BY</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s2-20" /><label for="cb-s2-20"
+            >CREATE VIEW para reportes recurrentes</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Proyecto de Cierre</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Análisis SQL Completo
+      </h3>
+      <ul class="cl" data-section="s2">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s2-21" /><label for="cb-s2-21"
+              >Importar dataset en PostgreSQL (mínimo 3 tablas
+              relacionadas)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s2-22" /><label for="cb-s2-22"
+              >Escribir mínimo 15 queries con JOINs, CTEs y window
+              functions</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s2-23" /><label for="cb-s2-23"
+              >Crear 3 views para reportes recurrentes</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s2-24" /><label for="cb-s2-24"
+              >Documentar cada query con comentarios explicando el
+              objetivo</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s2-25" /><label for="cb-s2-25"
+              >Subir archivo .sql a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 3 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Curso de SQL desde CERO - Píldoras Informáticas</b><br />🔗
+        https://www.youtube.com/watch?v=iOiyg0hY6dw
+      </div>
+      <div class="vi">
+        <b>▶ SQL para Análisis de Datos - Soy Dalto</b><br />🔗
+        https://www.youtube.com/watch?v=DFg1V-rO6Pg
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li>
+          <b>PostgreSQL:</b>
+          https://www.postgresql.org/docs/current/
+        </li>
+        <li><b>SQLBolt:</b> https://sqlbolt.com</li>
+        <li>
+          <b>Mode SQL Tutorial:</b> https://mode.com/sql-tutorial
+        </li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> SQL es la habilidad #1 que piden en TODAS las ofertas de
+      Data Analyst. Es tu herramienta más importante. Practicá todos los días.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 3 ===================== -->
+    <div class="mh" id="sec-s3">
+      <h1>
+        SEMANA 3: PYTHON PARA DATOS — FUNDAMENTOS
+        <span class="section-progress" id="sp-s3"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Aprender Python orientado al manejo de datos y dominar Jupyter Notebooks.
+      No necesitás ser un experto en programación — necesitás saber lo
+      suficiente para manipular datos con confianza.
+    </p>
+
+    <h3>Día 1-2: Python Crash Course</h3>
+    <ul class="cl" data-section="s3">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-0" /><label for="cb-s3-0"
+            >Variables, tipos de datos, f-strings, operadores</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-1" /><label for="cb-s3-1"
+            >Listas, diccionarios, tuplas, sets</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-2" /><label for="cb-s3-2"
+            >Comprehensions: list comprehension, dict comprehension</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-3" /><label for="cb-s3-3"
+            >Funciones: def, *args, **kwargs, lambda</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-4" /><label for="cb-s3-4"
+            >Control de flujo: if/elif/else, for, while</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-5" /><label for="cb-s3-5"
+            >Manejo de archivos: open, read, write (CSV, JSON)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-6" /><label for="cb-s3-6"
+            >Módulos: import, pip install, virtual environments (venv)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-7" /><label for="cb-s3-7"
+            >Type hints básicos</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="sb">
+      <h3>
+        <span class="mt">Lectura Obligatoria</span> Si ya sabés JavaScript
+      </h3>
+      <p>
+        Si venís del plan Fullstack y ya sabés JavaScript, Python se absorbe en
+        un día. La sintaxis es más simple, no hay llaves ni punto y coma, y la
+        filosofía es "explícito es mejor que implícito". Enfocate en las
+        diferencias: indentación obligatoria, list comprehensions, y el manejo
+        de archivos.
+      </p>
+    </div>
+
+    <h3>Día 3: Jupyter Notebooks + NumPy</h3>
+    <ul class="cl" data-section="s3">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-8" /><label for="cb-s3-8"
+            >Jupyter: celdas de código vs markdown, shortcuts (Shift+Enter,
+            Tab)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-9" /><label for="cb-s3-9"
+            >Markdown en Jupyter: títulos, listas, fórmulas LaTeX</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-10" /><label for="cb-s3-10"
+            >NumPy: crear arrays, operaciones vectorizadas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-11" /><label for="cb-s3-11"
+            >Indexing, slicing, boolean indexing</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-12" /><label for="cb-s3-12"
+            >Funciones estadísticas: mean, std, median, percentile</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-13" /><label for="cb-s3-13"
+            >Broadcasting y reshape</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 4-5: Pandas Fundamentos</h3>
+    <ul class="cl" data-section="s3">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-14" /><label for="cb-s3-14"
+            >Series y DataFrames: crear desde diccionarios, listas, CSV</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-15" /><label for="cb-s3-15"
+            >Leer datos: read_csv, read_excel, read_json, read_sql</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-16" /><label for="cb-s3-16"
+            >Exploración: shape, dtypes, info(), describe(), head(),
+            tail()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-17" /><label for="cb-s3-17"
+            >Selección: loc, iloc, filtrado booleano</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-18" /><label for="cb-s3-18"
+            >value_counts(), unique(), nunique()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-19" /><label for="cb-s3-19"
+            >Manejo de NaN: isna(), fillna(), dropna()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-20" /><label for="cb-s3-20"
+            >Tipos de datos: astype(), to_datetime(),
+            pd.Categorical</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-21" /><label for="cb-s3-21"
+            >Ordenar: sort_values(), sort_index()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s3-22" /><label for="cb-s3-22"
+            >Rename columns, drop columns</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Proyecto de Cierre</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Exploración y Limpieza
+        con Pandas
+      </h3>
+      <ul class="cl" data-section="s3">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-23" /><label for="cb-s3-23"
+              >Cargar dataset real en Jupyter (CSV de Kaggle)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-24" /><label for="cb-s3-24"
+              >Exploración completa: shape, tipos, nulos, duplicados</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-25" /><label for="cb-s3-25"
+              >Limpieza: nulos, duplicados, tipos incorrectos</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-26" /><label for="cb-s3-26"
+              >Responder mínimo 10 preguntas con filtros, agrupaciones y
+              estadísticas</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-27" /><label for="cb-s3-27"
+              >Notebook documentado con markdown explicativo</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s3-28" /><label for="cb-s3-28"
+              >Subir notebook (.ipynb) a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 4 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Curso de Python desde CERO - Soy Dalto</b><br />🔗
+        https://www.youtube.com/watch?v=nKPbfIU442g
+      </div>
+      <div class="vi">
+        <b>▶ Pandas en 1 hora - Ringa Tech</b><br />🔗
+        https://www.youtube.com/watch?v=vmEHCJofslg
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li><b>Python:</b> https://docs.python.org/3/</li>
+        <li><b>Pandas:</b> https://pandas.pydata.org/docs/</li>
+        <li><b>NumPy:</b> https://numpy.org/doc/</li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Pandas es para el Data Analyst lo que React es para el
+      frontend developer. Es tu herramienta diaria. Dominala.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 4 ===================== -->
+    <div class="mh" id="sec-s4">
+      <h1>
+        SEMANA 4: PANDAS AVANZADO + VISUALIZACIÓN
+        <span class="section-progress" id="sp-s4"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Dominar transformaciones avanzadas en Pandas y crear visualizaciones
+      profesionales. Esta semana es donde pasás de "saber usar Pandas" a
+      "pensar en datos".
+    </p>
+
+    <h3>Día 1-2: Pandas Avanzado</h3>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-0" /><label for="cb-s4-0"
+            >GroupBy avanzado: agg(), transform(), apply()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-1" /><label for="cb-s4-1"
+            >Merge: merge(), join() — left, right, inner, outer</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-2" /><label for="cb-s4-2"
+            >Concatenar: concat() — axis=0 vs axis=1</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-3" /><label for="cb-s4-3"
+            >Pivot tables: pivot_table() y crosstab()</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-4" /><label for="cb-s4-4"
+            >Manejo de fechas: to_datetime, dt accessor (.year, .month,
+            .dayofweek)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-5" /><label for="cb-s4-5"
+            >String methods: str accessor (.contains, .replace, .split,
+            .strip)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-6" /><label for="cb-s4-6"
+            >Datos categóricos: pd.Categorical, cat.codes</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-7" /><label for="cb-s4-7"
+            >Renombrar y reindexar</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-8" /><label for="cb-s4-8"
+            >Apply con funciones custom</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 3-4: Visualización con Python</h3>
+    <ul class="cl" data-section="s4">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-9" /><label for="cb-s4-9"
+            >Matplotlib: figure, axes, subplots</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-10" /><label for="cb-s4-10"
+            >Tipos de gráficos: bar, barh, line, scatter, hist, box, pie</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-11" /><label for="cb-s4-11"
+            >Personalización: títulos, labels, colores, leyendas, grid</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-12" /><label for="cb-s4-12"
+            >Seaborn: set_theme, histplot, boxplot, scatterplot, heatmap</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-13" /><label for="cb-s4-13"
+            >Seaborn avanzado: pairplot, catplot, FacetGrid</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-14" /><label for="cb-s4-14"
+            >Plotly: gráficos interactivos (px.bar, px.scatter, px.line)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-15" /><label for="cb-s4-15"
+            >Plotly: hover info, animaciones, mapas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s4-16" /><label for="cb-s4-16"
+            >Buenas prácticas: elegir el gráfico correcto según el tipo de
+            dato, no mentir con datos</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="sb">
+      <h3>
+        <span class="mt">Lectura Obligatoria</span> Antes de graficar,
+        preguntate
+      </h3>
+      <p>
+        Antes de hacer un gráfico, preguntate: ¿qué historia quiero contar?
+        Un gráfico sin propósito es ruido visual. Cada visualización debe
+        responder UNA pregunta clara. Si no podés decir en una oración qué
+        muestra tu gráfico, empezá de nuevo.
+      </p>
+    </div>
+
+    <h3>Día 5-7: Proyecto de Cierre — EDA Completo</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Análisis Exploratorio de
+        Datos Completo
+      </h3>
+      <ul class="cl" data-section="s4">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-17" /><label for="cb-s4-17"
+              >Elegir dataset real de Kaggle (mínimo 5000 filas, 10+
+              columnas)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-18" /><label for="cb-s4-18"
+              >EDA completo: estadísticas, distribuciones,
+              correlaciones</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-19" /><label for="cb-s4-19"
+              >Limpieza y transformación de datos</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-20" /><label for="cb-s4-20"
+              >Mínimo 10 visualizaciones variadas (Matplotlib +
+              Seaborn)</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-21" /><label for="cb-s4-21"
+              >Al menos 2 gráficos interactivos con Plotly</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-22" /><label for="cb-s4-22"
+              >Notebook presentable con narrativa en markdown</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-23" /><label for="cb-s4-23"
+              >Conclusiones y hallazgos destacados</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s4-24" /><label for="cb-s4-24"
+              >Subir a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 5 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Matplotlib y Seaborn Tutorial - Ringa Tech</b><br />🔗
+        https://www.youtube.com/watch?v=jbG4WFjZSBk
+      </div>
+      <div class="vi">
+        <b>▶ Plotly en Python - Ringa Tech</b><br />🔗
+        https://www.youtube.com/watch?v=GGL6U0t8n0k
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li><b>Matplotlib:</b> https://matplotlib.org/stable/</li>
+        <li><b>Seaborn:</b> https://seaborn.pydata.org</li>
+        <li><b>Plotly:</b> https://plotly.com/python/</li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Un gráfico hermoso que no dice nada es peor que un
+      gráfico feo con insights reales. La visualización es una herramienta de
+      comunicación, no de decoración.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 5 ===================== -->
+    <div class="mh" id="sec-s5">
+      <h1>
+        SEMANA 5: POWER BI + DATA STORYTELLING
+        <span class="section-progress" id="sp-s5"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Crear dashboards interactivos profesionales y aprender a comunicar
+      insights con datos. El dashboard NO es el entregable — el insight es el
+      entregable.
+    </p>
+
+    <h3>Día 1-2: Power BI Fundamentos</h3>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-0" /><label for="cb-s5-0"
+            >Descargar Power BI Desktop (Windows) o alternativa: Looker Studio
+            (web)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-1" /><label for="cb-s5-1"
+            >Interfaz: Report view, Data view, Model view</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-2" /><label for="cb-s5-2"
+            >Importar datos: CSV, Excel, PostgreSQL</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-3" /><label for="cb-s5-3"
+            >Power Query Editor: transformaciones ETL básicas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-4" /><label for="cb-s5-4"
+            >Renombrar columnas, cambiar tipos, filtrar filas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-5" /><label for="cb-s5-5"
+            >Modelo de datos: relaciones entre tablas (1:N, N:M)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-6" /><label for="cb-s5-6"
+            >Tipos de visualizaciones: tabla, matriz, gráfico de barras,
+            líneas, circular, mapa, KPI</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 3-4: DAX y Dashboards</h3>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-7" /><label for="cb-s5-7"
+            >DAX básico: SUM, AVERAGE, COUNT, COUNTROWS</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-8" /><label for="cb-s5-8"
+            >CALCULATE: cambiar contexto de filtro</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-9" /><label for="cb-s5-9"
+            >Medidas vs columnas calculadas — cuándo usar cada una</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-10" /><label for="cb-s5-10"
+            >Funciones de tiempo: TOTALYTD, SAMEPERIODLASTYEAR,
+            DATEADD</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-11" /><label for="cb-s5-11"
+            >Filtros y slicers interactivos</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-12" /><label for="cb-s5-12"
+            >Diseño de dashboards: layout, colores, tipografía</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-13" /><label for="cb-s5-13"
+            >Interactividad: drill-down, tooltips, bookmarks, botones</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-14" /><label for="cb-s5-14"
+            >Formateo condicional en visualizaciones</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 5: Data Storytelling</h3>
+    <ul class="cl" data-section="s5">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-15" /><label for="cb-s5-15"
+            >Estructura narrativa: contexto → problema → análisis → insight →
+            acción</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-16" /><label for="cb-s5-16"
+            >Principios de diseño: contraste, alineación, repetición,
+            proximidad (CARP)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-17" /><label for="cb-s5-17"
+            >Elegir visualización según el mensaje que querés transmitir</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-18" /><label for="cb-s5-18"
+            >De datos crudos a insights accionables</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s5-19" /><label for="cb-s5-19"
+            >Presentar para diferentes audiencias (técnica vs
+            ejecutiva)</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Proyecto de Cierre</h3>
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto: Dashboard Interactivo
+        con Storytelling
+      </h3>
+      <ul class="cl" data-section="s5">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-20" /><label for="cb-s5-20"
+              >Dashboard interactivo en Power BI con mínimo 2 páginas</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-21" /><label for="cb-s5-21"
+              >Dataset real con múltiples tablas relacionadas</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-22" /><label for="cb-s5-22"
+              >Mínimo 5 medidas DAX</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-23" /><label for="cb-s5-23"
+              >Filtros, slicers y drill-down funcionales</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-24" /><label for="cb-s5-24"
+              >Storytelling: presentación de 5 minutos con los insights</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s5-25" /><label for="cb-s5-25"
+              >Exportar como PDF y subir a GitHub</label
+            >
+          </div>
+        </li>
+      </ul>
+      <p><b>No avances a la Semana 6 sin completar este proyecto.</b></p>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Power BI desde CERO - El Tío Tech</b><br />🔗
+        https://www.youtube.com/watch?v=5EcZsOsCYSg
+      </div>
+    </div>
+
+    <div class="ds">
+      <h3><span class="ot">Lectura Opcional</span> Documentación Oficial</h3>
+      <ul>
+        <li>
+          <b>Power BI:</b>
+          https://learn.microsoft.com/es-es/power-bi/
+        </li>
+        <li><b>DAX Guide:</b> https://dax.guide</li>
+        <li>
+          <b>Looker Studio:</b> https://lookerstudio.google.com
+        </li>
+      </ul>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> El dashboard no es el entregable. El INSIGHT es el
+      entregable. Si tu dashboard es espectacular pero no dice nada útil,
+      fallaste.
+    </div>
+
+    <hr />
+
+    <!-- ===================== SEMANA 6 ===================== -->
+    <div class="mh" id="sec-s6">
+      <h1>
+        SEMANA 6: PROYECTO FINAL — ANÁLISIS END-TO-END
+        <span class="section-progress" id="sp-s6"></span>
+      </h1>
+    </div>
+
+    <h2>Objetivos de la Semana</h2>
+    <p>
+      Integrar TODAS las herramientas en un análisis end-to-end profesional.
+      Este proyecto es tu carta de presentación — lo que mostrás en entrevistas
+      y en tu portfolio.
+    </p>
+
+    <h3>Día 1: Planificación</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-0" /><label for="cb-s6-0"
+            >Elegir dataset real (Kaggle, datos abiertos gobierno, APIs
+            públicas)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-1" /><label for="cb-s6-1"
+            >Definir mínimo 5 preguntas de negocio concretas</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-2" /><label for="cb-s6-2"
+            >Planificar pipeline: fuente → limpieza → análisis →
+            visualización → presentación</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-3" /><label for="cb-s6-3"
+            >Documentar alcance y limitaciones del análisis</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-4" /><label for="cb-s6-4"
+            >Crear repo en GitHub con README inicial</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 2-3: Extracción y Limpieza</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-5" /><label for="cb-s6-5"
+            >SQL: crear esquema en PostgreSQL, importar datos</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-6" /><label for="cb-s6-6"
+            >Queries de exploración inicial en SQL</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-7" /><label for="cb-s6-7"
+            >Python/Pandas: limpieza profunda en Jupyter</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-8" /><label for="cb-s6-8"
+            >Documentar cada decisión de limpieza (por qué eliminaste nulos,
+            cómo trataste outliers)</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-9" /><label for="cb-s6-9"
+            >Exportar dataset limpio</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 4-5: Análisis y Visualización</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-10" /><label for="cb-s6-10"
+            >EDA en Jupyter con estadísticas y visualizaciones</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-11" /><label for="cb-s6-11"
+            >Responder las preguntas de negocio con evidencia</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-12" /><label for="cb-s6-12"
+            >Dashboard interactivo en Power BI</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-13" /><label for="cb-s6-13"
+            >Al menos 1 insight no obvio que descubriste en el
+            análisis</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <h3>Día 6-7: Presentación y Portfolio</h3>
+    <ul class="cl" data-section="s6">
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-14" /><label for="cb-s6-14"
+            >Notebook final documentado con narrativa completa</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-15" /><label for="cb-s6-15"
+            >Dashboard publicado/exportado</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-16" /><label for="cb-s6-16"
+            >README profesional con screenshots y descripción del
+            análisis</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-17" /><label for="cb-s6-17"
+            >Presentación de 10 minutos: contexto, metodología, hallazgos,
+            recomendaciones</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-18" /><label for="cb-s6-18"
+            >Video corto recorriendo el dashboard</label
+          >
+        </div>
+      </li>
+      <li>
+        <div class="ci">
+          <input type="checkbox" id="cb-s6-19" /><label for="cb-s6-19"
+            >Subir todo a GitHub</label
+          >
+        </div>
+      </li>
+    </ul>
+
+    <div class="pb">
+      <h3>
+        <span class="mt">Obligatorio</span> Proyecto Final: Análisis de Datos
+        End-to-End
+      </h3>
+      <h4>Backend (SQL + Python):</h4>
+      <ul class="cl" data-section="s6">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-20" /><label for="cb-s6-20"
+              >Dataset real con mínimo 10,000 filas</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-21" /><label for="cb-s6-21"
+              >Esquema PostgreSQL con relaciones</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-22" /><label for="cb-s6-22"
+              >Notebook de limpieza documentado</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-23" /><label for="cb-s6-23"
+              >Notebook de análisis con visualizaciones</label
+            >
+          </div>
+        </li>
+      </ul>
+      <h4>Presentación (Power BI + Storytelling):</h4>
+      <ul class="cl" data-section="s6">
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-24" /><label for="cb-s6-24"
+              >Dashboard con mínimo 3 páginas</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-25" /><label for="cb-s6-25"
+              >Medidas DAX relevantes</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-26" /><label for="cb-s6-26"
+              >Storytelling con insights accionables</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-27" /><label for="cb-s6-27"
+              >README con screenshots</label
+            >
+          </div>
+        </li>
+        <li>
+          <div class="ci">
+            <input type="checkbox" id="cb-s6-28" /><label for="cb-s6-28"
+              >Deploy/exportar dashboard</label
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="vs">
+      <h3><span class="ot">Opcional</span> Videos Recomendados</h3>
+      <div class="vi">
+        <b>▶ Portfolio para Data Analyst - Ringa Tech</b><br />🔗
+        https://www.youtube.com/watch?v=oVLjTi-KjQs
+      </div>
+    </div>
+
+    <div class="tb">
+      <b>💡 Nota:</b> Este proyecto es tu carta de presentación. Commits
+      descriptivos, notebooks documentados, README con screenshots, dashboard
+      funcional. Es lo primero que va a ver un reclutador.
+    </div>
+
+    <hr />
+
+    <h1>REFERENCIAS Y RECOMENDACIONES FINALES</h1>
+
+    <h2>Metodología Sugerida</h2>
+    <ul>
+      <li><b>Regla 80/20:</b> 20% teoría + 80% práctica.</li>
+      <li>
+        <b>No avances sin entender:</b> usá los checkboxes para identificar
+        puntos débiles.
+      </li>
+      <li><b>Trabajá con datos reales desde el día 1.</b></li>
+      <li><b>Git desde el día 1:</b> commiteá todo, notebooks incluidos.</li>
+      <li>
+        <b>La documentación oficial es tu mejor amiga</b> — los videos son
+        complemento.
+      </li>
+      <li>
+        <b>Kaggle es tu mejor aliado:</b> datasets gratuitos, notebooks de
+        ejemplo, competencias para practicar.
+      </li>
+    </ul>
+
+    <h2>Creadores de Contenido Recomendados</h2>
+    <table>
+      <tr>
+        <th>Creador</th>
+        <th>Plataforma</th>
+        <th>Fuerte en</th>
+      </tr>
+      <tr>
+        <td>Ringa Tech</td>
+        <td>YouTube</td>
+        <td>Python, Pandas, Data Science</td>
+      </tr>
+      <tr>
+        <td>Píldoras Informáticas</td>
+        <td>YouTube</td>
+        <td>SQL, bases de datos</td>
+      </tr>
+      <tr>
+        <td>Soy Dalto</td>
+        <td>YouTube</td>
+        <td>Python desde cero</td>
+      </tr>
+      <tr>
+        <td>El Tío Tech</td>
+        <td>YouTube</td>
+        <td>Power BI, Excel</td>
+      </tr>
+      <tr>
+        <td>Matemáticas profe Alex</td>
+        <td>YouTube</td>
+        <td>Estadística</td>
+      </tr>
+    </table>
+
+    <h2>Tech Stack Completo</h2>
+    <table>
+      <tr>
+        <th>Categoría</th>
+        <th>Tecnología</th>
+        <th>Versión</th>
+      </tr>
+      <tr>
+        <td>Hojas de cálculo</td>
+        <td>Excel / Google Sheets</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Base de datos</td>
+        <td>PostgreSQL</td>
+        <td>16+</td>
+      </tr>
+      <tr>
+        <td>Lenguaje</td>
+        <td>Python</td>
+        <td>3.13+</td>
+      </tr>
+      <tr>
+        <td>Notebooks</td>
+        <td>JupyterLab</td>
+        <td>4+</td>
+      </tr>
+      <tr>
+        <td>Manipulación</td>
+        <td>Pandas</td>
+        <td>2.2+</td>
+      </tr>
+      <tr>
+        <td>Numérico</td>
+        <td>NumPy</td>
+        <td>2.0+</td>
+      </tr>
+      <tr>
+        <td>Visualización</td>
+        <td>Matplotlib</td>
+        <td>3.9+</td>
+      </tr>
+      <tr>
+        <td>Vis. Estadística</td>
+        <td>Seaborn</td>
+        <td>0.13+</td>
+      </tr>
+      <tr>
+        <td>Vis. Interactiva</td>
+        <td>Plotly</td>
+        <td>6+</td>
+      </tr>
+      <tr>
+        <td>BI / Dashboards</td>
+        <td>Power BI Desktop</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Alternativa BI</td>
+        <td>Looker Studio</td>
+        <td>—</td>
+      </tr>
+    </table>
+
+    <br />
+    <div
+      style="
+        text-align: center;
+        padding: 28px;
+        background: var(--accent-light);
+        border-radius: 12px;
+      "
+    >
+      <p style="font-size: 18px; font-weight: 700; color: var(--h2)">
+        ¡Éxitos en tu camino como Data Analyst! 📊
+      </p>
+      <p style="color: var(--h4)">
+        Tu progreso se guarda automáticamente en este navegador
+      </p>
+    </div>
+
+    <script src="../shared/app.js"></script>
+  </body>
+</html>
